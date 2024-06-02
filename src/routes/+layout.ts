@@ -1,3 +1,5 @@
+export const prerender = true;
+
 export const load = async function () {
 	const modules = import.meta.glob('$routes/**', { eager: true });
 

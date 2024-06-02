@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-cloudflare';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { md_pages } from '@drop-in/tools';
 
@@ -10,6 +10,9 @@ const config = {
 	extensions: ['.svelte', '.svx', '.md', '.html'],
 	kit: {
 		adapter: adapter(),
+		prerender: {
+			handleHttpError: 'warn',
+		},
 		alias: {
 			$: 'src',
 			$settings: 'src/settings',

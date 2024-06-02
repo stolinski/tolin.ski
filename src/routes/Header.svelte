@@ -8,9 +8,8 @@
 		<nav>
 			<!-- Add your nav -->
 			<ul>
-				<li><a href="/about">About</a></li>
 				<li><a href="/">Blog</a></li>
-				<li><a href="/rss.xml">Feed</a></li>
+				<!-- <li><a href="/rss.xml">Feed</a></li> -->
 			</ul>
 		</nav>
 	</div>

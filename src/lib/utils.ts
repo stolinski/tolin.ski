@@ -31,13 +31,16 @@ export function on_client_mount(funk: (unknown?: unknown) => unknown): string {
 
 function add_newlines(html: string) {
 	// Add newline after closing tags and self-closing tags
-	const formattedHtml = html
-		.replace(/<!--\[\-->|<!--\]-->/g, '')
-		.replace(/(<\/[^>]+>)(?=\s*<|$)/g, '$1\n')
-		.replace(/(<[^\/>]+\/>)(?=\s*<|$)/g, '$1\n')
-		.replace(/>\s*</g, '>\n<');
+	if (html) {
+		const formattedHtml = html
+			.replace(/<!--\[\-->|<!--\]-->/g, '')
+			.replace(/(<\/[^>]+>)(?=\s*<|$)/g, '$1\n')
+			.replace(/(<[^\/>]+\/>)(?=\s*<|$)/g, '$1\n')
+			.replace(/>\s*</g, '>\n<');
 
-	return formattedHtml.trim();
+		return formattedHtml.trim();
+	}
+	return '';
 }
 
 export async function make_code_string(js: string, html: string) {
