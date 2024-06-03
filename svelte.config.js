@@ -8,7 +8,7 @@ const config = {
 	// for more information about preprocessors
 	// preprocess: [vitePreprocess(), md_pages()],
 	preprocess: [vitePreprocess(), md_pages(), html_demo()],
-	extensions: ['.svelte', '.svx', '.md', '.html'],
+	extensions: ['.svelte', '.svx', '.md', '.html', '.demo'],
 	kit: {
 		adapter: adapter(),
 		prerender: {

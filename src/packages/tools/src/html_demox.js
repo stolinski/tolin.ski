@@ -1,4 +1,5 @@
 import { getHighlighter } from 'shiki';
+import { JSDOM } from 'jsdom';
 
 /**
  *
@@ -40,7 +41,7 @@ export function html_demo(options = { theme: 'night-owl' }) {
 	return {
 		name: 'html_demos',
 		async markup({ content, filename }) {
-			if (filename?.endsWith('.demo') && content.includes('<!-- DEMO -->')) {
+			if (filename?.endsWith('.html') && content.includes('<!-- DEMO -->')) {
 				const { insideScript, outsideScript } = parseContent(content);
 				// Removes comment at top of file
 				const content_without_demo_comment = content.replace('<!-- DEMO -->\n', '');
