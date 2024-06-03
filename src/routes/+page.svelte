@@ -7,12 +7,18 @@
 	const { data } = $props();
 </script>
 
-<!-- Wand a left sidebar, used layout-sidebar -->
 <div class="layout-sidebar-inverse full" style:--max-width="1100px" style:--side-bar-width="200px">
 	<section class="content">
-		<!-- This is visually hidden because we want an h1 but it's doesn't make sense in the design -->
-		<!-- This is a good tech for A11y but remove the class if you want it to be visible -->
 		<h1 class="visually-hidden">{settings.app_name}</h1>
+
+		<p>
+			Hi, I'm Scott Tolinski. This site is under construction and a WIP. If you are interested in
+			learning more about this codebase, check it out on <a
+				href="https://github.com/stolinski/tolin.ski"
+				target="_blank">Github</a
+			>
+		</p>
+		<p>Things will be broken and not great looking, but steadly improving as I work on this.</p>
 
 		{#each data.posts as post}
 			<PostListing {post} />
