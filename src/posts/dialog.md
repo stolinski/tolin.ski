@@ -31,7 +31,7 @@ A dialog is a basic popup window.
 
 <Dialog />
 
----
+-
 
 ## Basic Modal
 
