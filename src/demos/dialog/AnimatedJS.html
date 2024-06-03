@@ -1,0 +1,37 @@
+<!-- DEMO -->
+<script>
+	const dialog = document.getElementById('animated_dialog');
+	const open = document.getElementById('animated_open');
+	const form = document.getElementById('animated_form');
+
+	open.addEventListener('click', open_dialog);
+	form.addEventListener('submit', close_dialog);
+
+	function open_dialog() {
+		document.startViewTransition(() => {
+			dialog.showModal();
+		});
+	}
+
+	function close_dialog(e) {
+		e.preventDefault(); // Prevent the default form submission
+
+		const form = e.target; // Get the form element
+
+		document
+			.startViewTransition(() => {
+				dialog.close(); // Close the dialog
+			})
+			.then(() => {
+				form.submit(); // Submit the form programmatically after the transition
+			});
+	}
+</script>
+
+<button id="animated_open" onclick="{open_dialog}">Open Dialog</button>
+<dialog id="animated_dialog">
+	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
+	<form id="animated_form" method="dialog">
+		<button>OK 👍</button>
+	</form>
+</dialog>

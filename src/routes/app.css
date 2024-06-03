@@ -35,6 +35,10 @@ body {
 	--shiki-dark-bg: #011627;
 	color: #d6deeb;
 	--shiki-dark: #d6deeb;
+	tab-size: 20px;
+	overflow: scroll;
+	font-size: var(--fs-xs);
+	line-height: 1.5;
 }
 
 aside nav {
@@ -53,4 +57,15 @@ button {
 	background: transparent;
 	color: var(--fg);
 	border-radius: 4px;
+}
+
+hr {
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIgOC41IDYuMiA0bDcuOCA2IDYuNi01LjU1TDI3LjUgMTBsNC42NS01LjFMMzkuMiAxMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiLz48L3N2Zz4=');
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border: none !important;
+	height: 20px;
+	margin: 4rem auto;
+	width: 75px;
 }

@@ -9,9 +9,11 @@ layout: false
 ---
 
 <script>
-	import Dialog from "$/demos/dialog/Dialog.svelte";
-	import Modal from "$/demos/dialog/Modal.svelte";
-	import Alert from "$/demos/dialog/Alert.svelte";
+	import Dialog from "$/demos/dialog/Dialog.html";
+	import Modal from "$/demos/dialog/Modal.html";
+	import Alert from "$/demos/dialog/Alert.html";
+	import AnimatedJS from "$/demos/dialog/AnimatedJS.html";
+
 </script>
 
 `<dialog>` demos and exploration to solving different problems.
@@ -28,6 +30,8 @@ A dialog is a basic popup window.
 - Not on top layer
 
 <Dialog />
+
+---
 
 ## Basic Modal
 
@@ -48,11 +52,23 @@ Top layer is the fix for your z-index woes. It takes your content entirely out o
 - .showModal() puts in top layer
 - .show() uses z-index
 
+---
+
 ## Alert
+
+Nothing too fancy to make an alert, the dialog with showModal is the way to go here.
 
 <Alert />
 
+---
+
 ## Animation
+
+<AnimatedJS />
+
+### The JavaScript Solution
+
+### The CSS Solution
 
 ## Can I Use Dialog Today?
 

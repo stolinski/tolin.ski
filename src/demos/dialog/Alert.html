@@ -1,0 +1,17 @@
+<!-- DEMO -->
+<script>
+	const trigger = document.getElementById('open_alert');
+	const dialog = document.getElementById('alert_modal');
+	trigger.addEventListener('click', () => {
+		dialog.showModal();
+	});
+</script>
+
+<button id="open_alert">Remind Me</button>
+<dialog id="alert_modal">
+	<h3>Stay Up to Date</h3>
+	<form method="dialog">
+		<button type="submit">Allow Notifications</button>
+		<button class="close" type="reset">Close</button>
+	</form>
+</dialog>

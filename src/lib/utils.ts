@@ -21,12 +21,14 @@ function format_js(code: string) {
 
 export function on_client_mount(funk: (unknown?: unknown) => unknown): string {
 	const funk_str = funk.toString();
-	onMount(() => {
-		if (typeof document !== 'undefined') {
+	const formatted = format_js(funk_str);
+	if (typeof window !== 'undefined') {
+		onMount(() => {
 			funk();
-		}
-	});
-	return format_js(funk_str);
+		});
+	}
+
+	return formatted;
 }
 
 function add_newlines(html: string) {

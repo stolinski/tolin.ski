@@ -1,4 +1,4 @@
-export const load = async function ({ params, parent }) {
+export const load = async function ({ params }) {
 	const post = await import(`$/posts/${params.slug}.md`);
 
 	return {

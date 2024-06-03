@@ -1,0 +1,18 @@
+<!-- DEMO -->
+<script>
+	const trigger = document.getElementById('open');
+	const dialog = document.getElementById('dialog');
+	trigger.addEventListener('click', () => {
+		dialog.show();
+	});
+</script>
+
+<button id="open">Open</button>
+<dialog id="dialog">
+	<p>Newsletter Signup</p>
+	<p>Signup for the newsletter and get 20% off!</p>
+	<form method="dialog">
+		<input type="text" placeholder="password" />
+		<button type="submit">Login</button>
+	</form>
+</dialog>

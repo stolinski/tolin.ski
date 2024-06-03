@@ -1,0 +1,17 @@
+<!-- DEMO -->
+<script>
+	const trigger = document.getElementById('open_modal');
+	const dialog = document.getElementById('modal');
+	trigger.addEventListener('click', () => {
+		dialog.showModal();
+	});
+</script>
+
+<button id="open_modal">Open</button>
+<dialog id="modal">
+	<p>Login</p>
+	<form method="alert">
+		<input type="text" placeholder="password" />
+		<button type="submit">Login</button>
+	</form>
+</dialog>
