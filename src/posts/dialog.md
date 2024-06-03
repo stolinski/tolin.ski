@@ -10,6 +10,9 @@ layout: false
 
 <script>
 	import Dialog from "$/demos/dialog/Dialog.demo";
+	import Modal from "$/demos/dialog/Modal.demo";
+	import Alert from "$/demos/dialog/Alert.demo";
+	import AnimatedJS from "$/demos/dialog/AnimatedJS.demo";
 
 </script>
 
@@ -40,6 +43,8 @@ A dialog that takes over.
 - On top layer
 - Esc closes
 
+<Modal />
+
 ### Side Note - Top Layer
 
 Top layer is the fix for your z-index woes. It takes your content entirely out of the context of stacking order of CSS. This puts anything on top layer on top of all elements regardless of z-index. It creates a new "stacking context".
@@ -53,9 +58,13 @@ Top layer is the fix for your z-index woes. It takes your content entirely out o
 
 Nothing too fancy to make an alert, the dialog with showModal is the way to go here.
 
+<Alert />
+
 ---
 
 ## Animation
+
+<AnimatedJS />
 
 ### The JavaScript Solution
 
