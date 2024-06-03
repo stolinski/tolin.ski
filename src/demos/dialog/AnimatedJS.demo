@@ -28,7 +28,7 @@
 	}
 </script>
 
-<button id="animated_open" onclick="{open_dialog}">Open Dialog</button>
+<button id="animated_open">Open Dialog</button>
 <dialog id="animated_dialog">
 	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
 	<form id="animated_form" method="dialog">
