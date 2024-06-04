@@ -5,7 +5,6 @@ tags:
   - html
 category: cool-treats
 status: LIVE
-layout: false
 ---
 
 <script>
@@ -14,7 +13,6 @@ layout: false
 	import Alert from "$/demos/dialog/Alert.demo";
 	import AnimatedJS from "$/demos/dialog/AnimatedJS.demo";
 	import AnimatedCSS from "$/demos/dialog/AnimatedCSS.demo";
-
 </script>
 
 `<dialog>` demos and exploration to solving different problems.

@@ -9,6 +9,7 @@
 			<!-- Add your nav -->
 			<ul>
 				<li><a href="/">Blog</a></li>
+				<li><a href="/uses">Uses</a></li>
 				<!-- <li><a href="/rss.xml">Feed</a></li> -->
 			</ul>
 		</nav>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Post } from '$types/types';
+	import PostTags from './PostTags.svelte';
 	const { post }: { post: Post } = $props();
 </script>
 
@@ -7,7 +8,10 @@
 	<h2 style:--transition-name="post-title-{post.slug}">{post.title}</h2>
 	<p class="date">{post.date}</p>
 	<p>{@html post.excerpt}</p>
-	<p><a href="/{post.category}/{post.slug}">Read more</a></p>
+	<PostTags tags={post.tags} />
+	<p>
+		<a href="/{post.category}/{post.slug}">Read more</a>
+	</p>
 </article>
 
 <style>
@@ -20,7 +24,9 @@
 	}
 
 	.date {
+		font-variation-settings: 'wght' 100;
 		font-style: italic;
 		opacity: 0.6;
+		font-size: var(--fs-xs);
 	}
 </style>

@@ -87,7 +87,7 @@ h6,
 h1,
 .h1,
 .hl {
-	font-size: var(--fs-l);
+	font-size: var(--fs-xl);
 	font-variation-settings: 'wght' 900;
 }
 
@@ -95,20 +95,20 @@ h2,
 .h2,
 .hm {
 	font-style: italic;
-	font-size: var(--fs-m);
+	font-size: var(--fs-l);
 	font-variation-settings: 'wght' 900;
 }
 
 h3,
 .h3,
 .hs {
-	font-size: var(--fs-s);
+	font-size: var(--fs-m);
 }
 
 h4,
 .h4,
 .hxs {
-	font-size: var(--fs-xs);
+	font-size: var(--fs-s);
 }
 
 h5,

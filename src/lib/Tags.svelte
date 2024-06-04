@@ -7,7 +7,7 @@
 </script>
 
 <section class="tags">
-	<h3>Tags</h3>
+	<h3 class="h4">Tags</h3>
 	<ul class="no-list">
 		{#each tags as [tag, count]}
 			<li>
@@ -18,6 +18,9 @@
 </section>
 
 <style>
+	li {
+		font-size: var(--fs-xs);
+	}
 	a {
 		color: var(--fg);
 		text-decoration: none;

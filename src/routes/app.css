@@ -2,7 +2,7 @@
 	font-family: '🆒';
 	src:
 		local('ATNameMonoVariable-Regular'),
-		url('https://scotts-fonts.scott-bb5.workers.dev/NameMonoVariable.woff2') format('woff2');
+		url('https://fonts.tolin.ski/NameMonoVariable.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: normal;
 }
@@ -11,30 +11,35 @@
 	font-family: '🆒';
 	src:
 		local('ATNameMonoVariable-RegularItalic'),
-		url('https://scotts-fonts.scott-bb5.workers.dev/NameMonoItalicVariable.woff2') format('woff2');
+		url('https://fonts.tolin.ski/NameMonoItalicVariable.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: italic;
 }
 
 :root {
+	--pink: #ff25be;
+	--teal: #82d8d8;
+	--green: #a8fe38;
+	--red: #f88070;
 	--fg: #eee;
+	--bg: #191324;
 	--border-color: var(--fg);
 }
 
 body {
-	background: #101010;
+	background: var(--bg);
 	color: var(--fg);
 	font-family: '🆒';
 	font-feature-settings: 'ss12';
 }
 
 .shiki {
+	--shiki-dark-bg: #011627;
+	--shiki-dark: #d6deeb;
 	padding: 10px;
 	border-radius: 4px;
 	background-color: #011627;
-	--shiki-dark-bg: #011627;
 	color: #d6deeb;
-	--shiki-dark: #d6deeb;
 	tab-size: 20px;
 	overflow: scroll;
 	font-size: var(--fs-xs);
@@ -43,6 +48,13 @@ body {
 
 aside nav {
 	padding: 10px 0;
+}
+
+a {
+	color: var(--teal);
+	text-decoration-color: var(--red);
+	text-decoration-line: underline;
+	text-decoration-thickness: 3px;
 }
 
 aside nav a {

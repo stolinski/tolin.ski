@@ -3,7 +3,6 @@
 	import PostListing from '$lib/PostListing.svelte';
 	import Tags from '$lib/Tags.svelte';
 	import { settings } from '$settings';
-
 	const { data } = $props();
 </script>
 
@@ -11,14 +10,28 @@
 	<section class="content">
 		<h1 class="visually-hidden">{settings.app_name}</h1>
 
-		<p>
-			Hi, I'm Scott Tolinski. This site is under construction and a WIP. If you are interested in
-			learning more about this codebase, check it out on <a
-				href="https://github.com/stolinski/tolin.ski"
-				target="_blank">Github</a
-			>
-		</p>
-		<p>Things will be broken and not great looking, but steadly improving as I work on this.</p>
+		<div class="disclaimer">
+			<p>
+				Hi, I'm Scott Tolinski. This site is under construction and a WIP. If you are interested in
+				learning more about this codebase, check it out on <a
+					href="https://github.com/stolinski/tolin.ski"
+					target="_blank">Github</a
+				>
+			</p>
+
+			<p>Things will be broken and not great looking, but steadly improving as I work on this.</p>
+		</div>
+
+		<iframe
+			title="The Origins of Level Up Tutorials"
+			width="100%"
+			height="315"
+			src={`https://www.youtube.com/embed/Q9eh2iJsjxE`}
+			frameborder="0"
+			allow="accelerometer; encrypted-media; gyroscope;
+    picture-in-picture"
+			allowfullscreen
+		/>
 
 		{#each data.posts as post}
 			<PostListing {post} />
@@ -31,4 +44,8 @@
 	</aside>
 </div>
 
-<iframe src="http://localhost:5173/cool-treats/dialog" width="100%"></iframe>
+<style>
+	.disclaimer p {
+		font-size: var(--fs-xs);
+	}
+</style>
