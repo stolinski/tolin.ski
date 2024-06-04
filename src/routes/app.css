@@ -33,6 +33,15 @@ body {
 	font-feature-settings: 'ss12';
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-style: italic;
+}
+
 .shiki {
 	--shiki-dark-bg: #011627;
 	--shiki-dark: #d6deeb;
@@ -72,7 +81,7 @@ button {
 }
 
 hr {
-	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIgOC41IDYuMiA0bDcuOCA2IDYuNi01LjU1TDI3LjUgMTBsNC42NS01LjFMMzkuMiAxMCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjMiLz48L3N2Zz4=');
+	background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDEiIGhlaWdodD0iMTQiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTIgOC41IDYuMiA0bDcuOCA2IDYuNi01LjU1TDI3LjUgMTBsNC42NS01LjFMMzkuMiAxMCIgc3Ryb2tlPSIjZmYyNWJlIiBzdHJva2Utd2lkdGg9IjMiLz48L3N2Zz4=');
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -84,4 +93,6 @@ hr {
 
 .youtube {
 	aspect-ratio: 16 / 9;
+	border-radius: 10px;
+	box-shadow: 4px 3px 10px rgb(0 0 0 / 0.3);
 }

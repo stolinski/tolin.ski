@@ -4,7 +4,7 @@
 
 <header class="layout">
 	<div class="content">
-		<p><a href="/">{settings.app_name}</a></p>
+		<p class="logo"><a href="/">{settings.app_name}</a></p>
 		<nav>
 			<!-- Add your nav -->
 			<ul>
@@ -17,6 +17,10 @@
 </header>
 
 <style>
+	.logo {
+		font-style: italic;
+	}
+
 	.content {
 		display: flex;
 		justify-content: space-between;
@@ -24,7 +28,7 @@
 	}
 
 	header {
-		border-bottom: 1px solid rgb(255 255 255 / 0.1);
+		border-bottom: 1px solid rgb(0 0 0 / 0.5);
 	}
 	header a {
 		color: var(--fg);
@@ -35,8 +39,9 @@
 		margin: 0;
 		padding: 0;
 		display: flex;
-		gap: 10px;
+		gap: 25px;
 	}
-	li {
+	nav ul li {
+		font-size: var(--fs-xs);
 	}
 </style>
