@@ -52,7 +52,7 @@ aside nav {
 
 a {
 	color: var(--teal);
-	text-decoration-color: var(--red);
+	text-decoration-color: var(--pink);
 	text-decoration-line: underline;
 	text-decoration-thickness: 3px;
 }
@@ -80,4 +80,8 @@ hr {
 	height: 20px;
 	margin: 4rem auto;
 	width: 75px;
+}
+
+.youtube {
+	aspect-ratio: 16 / 9;
 }

@@ -25,7 +25,7 @@
 		<iframe
 			title="The Origins of Level Up Tutorials"
 			width="100%"
-			height="315"
+			class="youtube"
 			src={`https://www.youtube.com/embed/Q9eh2iJsjxE`}
 			frameborder="0"
 			allow="accelerometer; encrypted-media; gyroscope;
