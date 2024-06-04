@@ -3,13 +3,17 @@
 		$props();
 </script>
 
-<div class={view} style:--transition-name="post-excerpt-{slug}">
+<div class={view} class:readable={view === 'PAGE'} style:--transition-name="post-excerpt-{slug}">
 	{@html excerpt}
 </div>
 
 <style>
 	div {
 		view-transition-name: var(--transition-name);
+	}
+
+	.PAGE {
+		text-align: center;
 	}
 
 	.PAGE :global(*) {

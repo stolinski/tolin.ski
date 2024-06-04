@@ -74,6 +74,8 @@ To animate a dialog with JS, you can use any number of your own JS framework lib
 
 <AnimatedJS />
 
+___
+
 ### The CSS Solution
 
 <AnimatedCSS />
@@ -89,3 +91,13 @@ Pop this in with `<Dialog>` or a popover and you've got a stew goin'.
 <h4 class="h3">Can I use @starting-style? - ❔ Possibly 70% support</h4>
 
 Some nuance there. It's not supported in Firefox and given Firefox's pace lately, who knows. It will gracefully fallback and not animate, so in that regard, only FF users on desktop aren't getting the full experience and that's ok with me.
+
+### Side Note - allow-discrete
+
+You may have noticed `display 1s allow-discrete` in the previous example. Try running that code and removing the allow-discrete in your own code. You'll see that at first glance the animation still works. So what gives?
+
+Well, close the dialog and see the issue. When dialog is toggled, `display:none;` is removed. Since it's instantly removed, the intro animation still works with just @starting-style, however when closing the dialog, `display:none;` is applied immediately and therefore there is no animation on close. ☹️.
+
+<h4 class="h3">Can I use allow-discrete? - YES Possibly 77% support</h4>
+
+Firefox support coming August 6th, is in Nightly already.

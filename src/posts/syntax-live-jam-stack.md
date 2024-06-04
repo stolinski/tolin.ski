@@ -7,7 +7,7 @@ category: talks
 status: LIVE
 ---
 
-The 2nd ever Syntax Live. Wes and I had games and fun user interaction.
+The 1st ever Syntax Live. Wes and I meet for the first time and do a live show.
 
 <!-- excerpt -->
 

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import PostTags from '$/lib/PostTags.svelte';
 	import Excerpt from '$/lib/Excerpt.svelte';
-
 	const { data } = $props();
 </script>
 
