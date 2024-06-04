@@ -30,3 +30,5 @@
 		<Tags tags={data.tags} />
 	</aside>
 </div>
+
+<iframe src="http://localhost:5173/cool-treats/dialog" width="100%"></iframe>

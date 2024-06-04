@@ -27,5 +27,15 @@ module.exports = {
 				parser: '@typescript-eslint/parser',
 			},
 		},
+		{
+			files: ['*.md'],
+			parser: 'eslint-plugin-markdownlint/parser',
+			extends: ['plugin:markdownlint/recommended'],
+			rules: {
+				'hr-style': {
+					style: '___',
+				},
+			},
+		},
 	],
 };

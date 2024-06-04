@@ -3,12 +3,36 @@
 	const dialog = document.getElementById('css_dialog');
 	const open = document.getElementById('css_open');
 	open.addEventListener('click', open_dialog);
+	function open_dialog() {
+		dialog.showModal();
+	}
 </script>
 
-<button id="css_dialog" onclick="{open_dialog}">Open Dialog</button>
-<dialog id="css_open">
+<button id="css_open">Open Dialog</button>
+<dialog id="css_dialog">
 	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
 	<form method="dialog">
 		<button>OK 👍</button>
 	</form>
 </dialog>
+
+<style>
+	dialog,
+	::backdrop {
+		transition:
+			opacity 1s;
+		opacity: 0;
+	}
+
+	[open],
+	[open]::backdrop {
+		opacity: 1;
+	}
+
+	@starting-style {
+		[open],
+		[open]::backdrop {
+			opacity: 0;
+		}
+	}
+</style>
