@@ -177,6 +177,7 @@ a {
 	grid-template-columns: [start] 2.5vw [content] 95% [content] 2.5vw [end];
 }
 
+
 .layout-sidebar {
 	--side-bar-width: 300px;
 	--layout-margin: 2.5vw;
@@ -191,6 +192,7 @@ a {
 	display: grid;
 }
 
+
 :is(.layout, .layout-sidebar, .layout-sidebar-inverse) > * {
 	grid-column: content / content;
 }
@@ -201,13 +203,21 @@ a {
 	max-width: var(--max-width);
 	margin-inline: auto;
 	grid-template-columns:
-		[start l-margin] var(--layout-margin) [l-margin main content] auto
-		[content gap]
+		[start l-margin] var(--layout-margin) [l-margin content main] auto
+		[main gap]
 		var(--layout-margin)
-		[gap sidebar] var(--side-bar-width) [sidebar main r-margin] var(--layout-margin)
+		[gap sidebar] var(--side-bar-width) [sidebar content r-margin] var(--layout-margin)
 		[r-margin end];
 	display: grid;
 }
+
+@media (width < 700px) {
+	.layout-sidebar, .layout, .layout-sidebar-inverse {
+		grid-template-columns: [start] 2.5vw [content] 95% [content] 2.5vw [end];
+	}
+}
+
+
 
 .full {
 	width: 100%;
