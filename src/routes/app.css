@@ -115,4 +115,5 @@ hr {
 	aspect-ratio: 16 / 9;
 	border-radius: 10px;
 	box-shadow: 4px 3px 10px rgb(0 0 0 / 0.3);
+	border: solid 7px rgb(0 0 0 / 0.3);
 }
