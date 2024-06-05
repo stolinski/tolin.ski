@@ -27,16 +27,28 @@ function parseContent(input) {
  * @returns
  */
 async function transform(code, theme) {
-	const highlighter = await getHighlighter({
-		themes: [theme],
-		langs: ['html'],
-	});
-	await highlighter.loadLanguage('html');
-	return highlighter.codeToHtml(code, { lang: 'html', theme });
+	if (typeof theme === 'string') {
+		const highlighter = await getHighlighter({
+			themes: [theme],
+			langs: ['html'],
+		});
+		await highlighter.loadLanguage('html');
+		return highlighter.codeToHtml(code, { lang: 'html', theme });
+	} else {
+		const highlighter = await getHighlighter({
+			themes: [],
+			langs: ['html'],
+		});
+		highlighter.loadTheme(theme);
+		await highlighter.loadLanguage('html');
+		return highlighter.codeToHtml(code, { lang: 'html', theme: 'syntax' });
+	}
 }
 
+const default_theme = 'night-owl';
+
 /** @returns {import('svelte/types/compiler/preprocess').PreprocessorGroup} */
-export function html_demo(options = { theme: 'night-owl' }) {
+export function html_demo(options = { theme: default_theme }) {
 	return {
 		name: 'html_demos',
 		async markup({ content, filename }) {

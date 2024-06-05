@@ -1,0 +1,33 @@
+<!-- DEMO -->
+<details class="css-only">
+	<summary>Details</summary>
+	<div id="content-css-only">
+		<p>This is just a basic accordion</p>
+	</div>
+</details>
+
+<style>
+	.css-only #content-css-only {
+		transition:
+			display 1s allow-discrete,
+			overlay 1s allow-discrete,
+			max-height 1s,
+			opacity 1s;
+		opacity: 0;
+	}
+
+	#content-css-only {
+		max-height: 0;
+	}
+
+	.css-only[open] #content-css-only {
+		opacity: 1;
+		max-height: 1000px;
+	}
+
+	@starting-style {
+		.css-only[open] #content-css-only {
+			opacity: 0;
+		}
+	}
+</style>

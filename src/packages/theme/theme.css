@@ -75,7 +75,7 @@ h5,
 .hxs,
 h6,
 .h6 {
-	margin-block: 0.8em;
+	margin-block: 1em;
 	line-height: var(--line-height);
 	text-wrap: balance;
 }
@@ -95,6 +95,7 @@ h2,
 .h2,
 .hm {
 	font-style: italic;
+	margin-block-start: 2em;
 	font-size: var(--fs-l);
 	font-variation-settings: 'wght' 900;
 }
@@ -102,6 +103,7 @@ h2,
 h3,
 .h3,
 .hs {
+	margin-block-start: 2em;
 	font-size: var(--fs-m);
 }
 

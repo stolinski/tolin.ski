@@ -26,6 +26,10 @@
 	--border-color: var(--fg);
 }
 
+html {
+	color-scheme: dark light;
+}
+
 body {
 	background: var(--bg);
 	color: var(--fg);
@@ -43,16 +47,32 @@ h6 {
 }
 
 .shiki {
-	--shiki-dark-bg: #011627;
+	--shiki-dark-bg: #000;
 	--shiki-dark: #d6deeb;
 	padding: 10px;
-	border-radius: 4px;
-	background-color: #011627;
+	border: 1px solid rgb(255 255 255 / 0.1);
 	color: #d6deeb;
 	tab-size: 20px;
 	overflow: scroll;
 	font-size: var(--fs-xs);
 	line-height: 1.5;
+	border-radius: 10px;
+	box-shadow: 4px 3px 10px rgb(0 0 0 / 0.3);
+}
+
+code {
+	counter-reset: step;
+	counter-increment: step calc(var(--line-start, 1) - 1);
+}
+
+code > .line:not(:last-child)::before {
+	content: counter(step);
+	counter-increment: step;
+	width: 1rem;
+	margin-right: 1.5rem;
+	display: inline-block;
+	text-align: right;
+	color: rgba(115, 138, 148, 0.4);
 }
 
 aside nav {

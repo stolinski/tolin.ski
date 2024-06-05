@@ -15,16 +15,10 @@
 
 	function close_dialog(e) {
 		e.preventDefault(); // Prevent the default form submission
-
 		const form = e.target; // Get the form element
-
-		document
-			.startViewTransition(() => {
-				dialog.close(); // Close the dialog
-			})
-			.then(() => {
-				form.submit(); // Submit the form programmatically after the transition
-			});
+		document.startViewTransition(() => {
+			form.submit();
+		});
 	}
 </script>
 

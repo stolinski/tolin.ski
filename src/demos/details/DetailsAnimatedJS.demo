@@ -1,0 +1,82 @@
+<!-- DEMO -->
+<script>
+	const details = document.getElementById('details_animate_js');
+	const content = details.querySelector('.details-content');
+	const summary = details.querySelector('summary');
+	let is_collapsing = false;
+	let is_expanding = false;
+	let animation = null;
+
+	summary.addEventListener('click', (e) => {
+		e.preventDefault();
+		details.style.overflow = 'hidden';
+		if (is_expanding || details.open) {
+			collapse();
+		} else {
+			expand();
+		}
+	});
+
+	function expand() {
+		// when details opens it will expand height automatically
+		details.style.height = `${details.offsetHeight}px`;
+		// without this, content will be blank until animation is complete
+		details.open = true;
+		console.log('details.style.height', details.style.height);
+		window.requestAnimationFrame(() => {
+			is_expanding = true;
+			if (animation) animation.cancel();
+			const start = `${details.offsetHeight}px`;
+			const end = `${summary.offsetHeight + content.offsetHeight}px`;
+			animation = details.animate(
+				{
+					height: [start, end],
+				},
+				{
+					duration: 300,
+					easing: 'ease-in-out',
+				},
+			);
+			animation.onfinish = () => on_finish(true);
+			animation.oncancel = () => (is_expanding = false);
+		});
+	}
+
+	function collapse() {
+		is_collapsing = true;
+		window.requestAnimationFrame(() => {
+			const start = `${details.offsetHeight}px`;
+			const end = `${summary.offsetHeight}px`;
+			if (animation) animation.cancel();
+			animation = details.animate(
+				{
+					height: [start, end],
+				},
+				{
+					duration: 300,
+					easing: 'ease-in-out',
+				},
+			);
+
+			animation.onfinish = () => on_finish(false);
+			animation.oncancel = () => (is_collapsing = false);
+		});
+	}
+
+	function on_finish(is_open) {
+		details.open = is_open;
+		animation = null;
+		is_collapsing = false;
+		is_expanding = false;
+		details.style.height = null;
+		details.style.overflow = 'visible';
+	}
+</script>
+
+<details id="details_animate_js">
+	<summary>Details</summary>
+	<div class="details-content">
+		<p>This is an accordion with more</p>
+		<p>I'm adding more stuff here to make animation look nicer.</p>
+	</div>
+</details>
