@@ -48,3 +48,7 @@ This next one is good, less code, but the container itself still isn't sliding w
 ## A CSS Only Accordion with `<details>`
 
 <CSSOnly />
+
+### WTF is max-block-size
+
+max-block-size === max-height. Well.. kinda, it's the logical property version of max-height. This supports all type directions instead of just top to bottom, left to right. This is the same as things like margin-block, margin-inline. It has full browser support, so update your brain matter and use block-size and inline-size.abs
