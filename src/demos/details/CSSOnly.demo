@@ -9,20 +9,23 @@
 <style>
 	.css-only #content-css-only {
 		transition:
-			display 1s allow-discrete,
-			overlay 1s allow-discrete,
-			max-height 1s,
-			opacity 1s;
+			display 0.3s,
+			opacity 0.3s,
+			max-height 0.3s;
+		transition-behavior: allow-discrete;
 		opacity: 0;
+		max-height: 0;
 	}
 
 	.css-only[open] #content-css-only {
 		opacity: 1;
+		max-height: 200px;
 	}
 
 	@starting-style {
 		.css-only[open] #content-css-only {
 			opacity: 0;
+			max-height: 0;
 		}
 	}
 </style>
