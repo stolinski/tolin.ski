@@ -1,7 +1,7 @@
 <!-- DEMO -->
 <style>
 	::marker,
-	::webkit-details-marker {
+	::-webkit-details-marker {
 		display: none;
 	}
 

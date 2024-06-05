@@ -22,7 +22,7 @@
 		details.style.height = `${details.offsetHeight}px`;
 		// without this, content will be blank until animation is complete
 		details.open = true;
-		console.log('details.style.height', details.style.height);
+
 		window.requestAnimationFrame(() => {
 			is_expanding = true;
 			if (animation) animation.cancel();
