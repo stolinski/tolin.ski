@@ -1,0 +1,12 @@
+<!-- DEMO -->
+<button popovertargetaction="show" popovertarget="menu-demo-popover">Show</button>
+<button popovertargetaction="hide" popovertarget="menu-demo-popover">Hide</button>
+<button popovertargetaction="toggle" popovertarget="menu-demo-popover">Toggle</button>
+
+<div popover id="menu-demo-popover">
+	<ul class="menu-demo">
+		<li><a href="#">Edit</a></li>
+		<li><a href="#">Update</a></li>
+		<li><a href="#">Delete</a></li>
+	</ul>
+</div>
