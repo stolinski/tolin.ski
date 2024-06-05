@@ -19,19 +19,20 @@
 				>
 			</p>
 
-			<p>Things will be broken and not great looking, but steadly improving as I work on this.</p>
+			<p>Things will be broken and not great looking, but steadily improving as I work on this.</p>
 		</div>
 
 		<iframe
+			loading="lazy"
 			title="The Origins of Level Up Tutorials"
 			width="100%"
 			class="youtube"
 			src={`https://www.youtube.com/embed/Q9eh2iJsjxE`}
 			frameborder="0"
-			allow="accelerometer; encrypted-media; gyroscope;
-    picture-in-picture"
+			allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen
-		/>
+		>
+		</iframe>
 
 		{#each data.posts as post}
 			<PostListing {post} />
