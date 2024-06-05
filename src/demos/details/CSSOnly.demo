@@ -9,10 +9,9 @@
 <style>
 	.css-only #content-css-only {
 		transition:
-			display 0.3s,
+			display 0.3s allow-discrete,
 			opacity 0.3s,
 			max-height 0.3s;
-		transition-behavior: allow-discrete;
 		opacity: 0;
 		max-height: 0;
 	}
