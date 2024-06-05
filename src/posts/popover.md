@@ -9,6 +9,7 @@ status: LIVE
 
 <script>
 	import Menu from '$/demos/popover/Menu.demo';
+	import Action from '$/demos/popover/Action.demo';
 </script>
 
 `popover` demos and exploration of menus
@@ -21,9 +22,17 @@ Here is a basic popover. You can use these anytime you need something that overl
 
 <Menu />
 
+So what's the difference between popover and dialog? Dialog is more full featured and popover is more flexible. Dialog is also a semantic element for a dialog where popover is a generic attribute based API. I typically use Dialog for modals and alerts but popover for menus, tooltips, ect.
+
 ## Popover Actions
 
+<Action />
+
+___
+
 ## Menu w/ Compatible Anchor
+
+___
 
 ## Menu w/ Anchor Positioning
 
@@ -37,5 +46,14 @@ But wait?! Is there a Polyfill?
 
 There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, so probably best to use the above listed compatible anchor strategy.
 
-<p class="ciu_embed" data-feature="mdn-css_at-rules_starting-style" data-periods="future_1,current,past_1" data-accessible-colours="false">
-</p>
+
+___
+
+## What About JavaScript?
+
+<!-- Tooltip demo -->
+
+
+## Further reading
+
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API)

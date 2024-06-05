@@ -1,9 +1,10 @@
 <!-- DEMO -->
-<button popovertargetaction="show" popovertarget="menu-demo-popover">Show</button>
-<button popovertargetaction="hide" popovertarget="menu-demo-popover">Hide</button>
-<button popovertargetaction="toggle" popovertarget="menu-demo-popover">Toggle</button>
+<button popovertargetaction="show" popovertarget="ampd">Show</button>
 
-<div popover id="menu-demo-popover">
+<button popovertargetaction="toggle" popovertarget="ampd">Toggle</button>
+
+<div popover id="ampd">
+	<button popovertargetaction="hide" popovertarget="ampd">Hide</button>
 	<ul class="menu-demo">
 		<li><a href="#">Edit</a></li>
 		<li><a href="#">Update</a></li>
