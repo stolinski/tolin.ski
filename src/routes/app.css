@@ -2,7 +2,7 @@
 	font-family: '🆒';
 	src:
 		local('ATNameMonoVariable-Regular'),
-		url('https://fonts.tolin.ski/NameMonoVariable.woff2') format('woff2');
+		url('https://fonts.tolin.ski/fonts/NameMonoVariable.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: normal;
 }
@@ -11,7 +11,7 @@
 	font-family: '🆒';
 	src:
 		local('ATNameMonoVariable-RegularItalic'),
-		url('https://fonts.tolin.ski/NameMonoItalicVariable.woff2') format('woff2');
+		url('https://fonts.tolin.ski/fonts/NameMonoItalicVariable.woff2') format('woff2');
 	font-weight: 100 900;
 	font-style: italic;
 }
