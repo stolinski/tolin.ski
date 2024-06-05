@@ -11,20 +11,20 @@
 		transition:
 			display 0.3s allow-discrete,
 			opacity 0.3s,
-			max-height 0.3s;
+			max-block-size 0.3s;
 		opacity: 0;
-		max-height: 0;
+		max-block-size: 0;
 	}
 
 	.css-only[open] #content-css-only {
 		opacity: 1;
-		max-height: 200px;
+		max-block-size: 200px;
 	}
 
 	@starting-style {
 		.css-only[open] #content-css-only {
 			opacity: 0;
-			max-height: 0;
+			max-block-size: 0;
 		}
 	}
 </style>
