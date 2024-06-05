@@ -16,13 +16,8 @@
 		opacity: 0;
 	}
 
-	#content-css-only {
-		max-height: 0;
-	}
-
 	.css-only[open] #content-css-only {
 		opacity: 1;
-		max-height: 1000px;
 	}
 
 	@starting-style {
