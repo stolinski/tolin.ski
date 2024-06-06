@@ -33,7 +33,11 @@ ___
 
 ## Dialog Drawer JS Version
 
-Well that stinks. But it turns out writing this same feature using the Web Animations API isn't too rough. I'm sure this oce could even be further cleaned up
+Well that stinks. But it turns out writing this same feature using the Web Animations API isn't too rough. I'm sure this once could even be further cleaned up. 
 
 
 <DialogJS />
+
+### Can I use this?
+
+So, if I can't really use the css forward version, can I use this JS version? Yes! The only newer feature here is the Web Animations API with 97% support.
