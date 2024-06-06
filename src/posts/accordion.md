@@ -12,6 +12,7 @@ status: LIVE
 	import Caret from '$/demos/details/Caret.demo';
 	import DetailsAnimatedJS from '$/demos/details/DetailsAnimatedJS.demo';
 	import CSSOnly from '$/demos/details/CSSOnly.demo';
+	import Exclusive from '$/demos/details/Exclusive.demo';
 	import DetailsAnimatedPageTransition from '$/demos/details/DetailsAnimatedPageTransition.demo';
 </script>
 
@@ -47,8 +48,16 @@ This next one is good, less code, but the container itself still isn't sliding w
 
 ## A CSS Only Accordion with `<details>`
 
+It feels like this should work and maybe it's just a browser issue / quirk that it doesn't currently. Maybe by the time you're looking at this it's ✨flawless✨. 
+
 <CSSOnly />
 
 ### WTF is max-block-size
 
-max-block-size === max-height. Well.. kinda, it's the logical property version of max-height. This supports all type directions instead of just top to bottom, left to right. This is the same as things like margin-block, margin-inline. It has full browser support, so update your brain matter and use block-size and inline-size.abs
+max-block-size === max-height. Well.. kinda, it's the logical property version of max-height. This supports all type directions instead of just top to bottom, left to right. This is the same as things like margin-block, margin-inline. It has full browser support, so update your brain matter and use block-size and inline-size.
+
+## Exclusive Accordions
+
+By giving an accordion a name attribute, you can make it part of a group of "exclusive" accordions where only one with the same name can be open at a time.
+
+<Exclusive />

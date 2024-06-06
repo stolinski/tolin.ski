@@ -1,5 +1,5 @@
 <!-- DEMO -->
 <details>
 	<summary>Details</summary>
-	This is just a basic accordion
+	<p>This is just a basic accordion</p>
 </details>

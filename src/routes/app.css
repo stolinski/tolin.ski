@@ -24,6 +24,7 @@
 	--fg: #eee;
 	--bg: #191324;
 	--border-color: var(--fg);
+	--highlight-border: 1px solid rgb(255 255 255 / 0.1);
 }
 
 html {
@@ -116,4 +117,15 @@ hr {
 	border-radius: 10px;
 	box-shadow: 4px 3px 10px rgb(0 0 0 / 0.3);
 	border: solid 7px rgb(0 0 0 / 0.3);
+}
+
+summary {
+	font-size: var(--fs-base);
+	cursor: pointer;
+	padding-block: 1rem;
+}
+
+details {
+	padding-inline: 1rem;
+	border: var(--highlight-border);
 }
