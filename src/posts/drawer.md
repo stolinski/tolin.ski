@@ -8,6 +8,7 @@ category: cool-treats
 status: LIVE
 ---
 <script>
+	import HTML from '$/demos/drawer/HTML.demo'
 	import Dialog from '$/demos/drawer/Dialog.demo'
 	import DialogJS from '$/demos/drawer/DialogJS.demo'
 </script>
@@ -15,6 +16,13 @@ status: LIVE
 How to make a drawer with `<dialog>` using only browser APIs.
 
 <!-- excerpt -->
+
+## The Foundation
+
+Here is the general HTML Structure we're working with. Without the CSS and JS, nothing will happen.
+
+<HTML />
+
 
 ## Dialog Drawer CSS Version
 

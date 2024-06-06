@@ -1,0 +1,11 @@
+<!-- DEMO -->
+<button>Open (wont't work)</button>
+<dialog>
+	<button>Cancel</button>
+	<h3>Create a new issue</h3>
+	<form method="dialog">
+		<input type="text" placeholder="Title" />
+		<textarea placeholder="Write a message"></textarea>
+		<button type="submit">Submit</button>
+	</form>
+</dialog>
