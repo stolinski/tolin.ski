@@ -23,6 +23,7 @@
 	--red: #f88070;
 	--fg: #eee;
 	--bg: #191324;
+	--black: #111;
 	--border-color: var(--fg);
 	--highlight-border: 1px solid rgb(255 255 255 / 0.1);
 }
@@ -161,6 +162,9 @@ div[popover] {
 
 ::placeholder {
 	color: rgb(255 255 255 / 0.6);
+}
+dialog {
+	background: var(--black);
 }
 
 dialog form {

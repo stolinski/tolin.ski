@@ -1,0 +1,87 @@
+<!-- DEMO -->
+<script>
+	const dialog = document.querySelector('#js-dialog');
+	const open = document.querySelector('#js-trigger');
+	const close = document.querySelector('#js-dialog .close');
+	let is_opening = false;
+	let is_closing = false;
+
+	open.addEventListener('click', toggle);
+	close.addEventListener('click', toggle);
+
+	function toggle() {
+		is_opening = !dialog.open;
+		is_closing = dialog.open;
+
+		let start = `0 0`;
+		let end = '0 100vb';
+		let translate = is_closing ? [start, end] : [end, start];
+		if (is_opening) {
+			dialog.showModal();
+		}
+
+		window.requestAnimationFrame(() => {
+			let animation = dialog.animate(
+				{
+					translate,
+				},
+				{
+					duration: 300,
+					easing: 'ease-in-out',
+					fill: 'forwards',
+				},
+			);
+			animation.onfinish = () => {
+				if (is_closing) {
+					dialog.close();
+				}
+				is_closing = false;
+				is_opening = false;
+			};
+		});
+	}
+</script>
+
+<button id="js-trigger">Open Dialog</button>
+<dialog id="js-dialog">
+	<button class="close">Cancel</button>
+	<h3>Create a new issue</h3>
+	<form method="dialog">
+		<input type="text" placeholder="Title" />
+		<textarea placeholder="Write a message"></textarea>
+		<button type="submit">Submit</button>
+	</form>
+</dialog>
+
+<style>
+	/* UI Code */
+
+	#js-dialog {
+		translate: 0 100vb;
+		height: 98vb;
+		width: 100vi;
+		padding: 1rem;
+		border-radius: 25px 25px 0 0;
+		border: none;
+		max-width: 100%;
+		box-shadow:
+			rgba(0, 0, 0, 0.25) 0px 54px 55px,
+			rgba(0, 0, 0, 0.12) 0px -12px 30px;
+		inset-block-start: unset;
+
+		&::backdrop {
+			transition: opacity 0.2s 0.4s;
+			background: rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	body:has([open]) {
+		overflow: hidden;
+	}
+
+	button[type='submit'] {
+		position: absolute;
+		inset-inline-end: 1rem;
+		inset-block-start: 1rem;
+	}
+</style>
