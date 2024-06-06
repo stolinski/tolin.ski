@@ -1,12 +1,51 @@
 <!-- DEMO -->
-<script></script>
+<script>
+	let button = document.getElementById('md');
+	let popover = document.getElementById('mdp');
 
-<button popovertarget="menu-demo-popover">Menu</button>
+	function update_position() {
+		const anchor_position = popover.getBoundingClientRect();
+		const target_position = button.getBoundingClientRect();
 
-<div popover id="menu-demo-popover">
+		popover.style.inset = 'unset';
+		popover.style.top = target_position.bottom + 'px';
+		button.style.left = anchor_position.left + 'px';
+	}
+
+	const resizeObserver = new ResizeObserver(update_position);
+	resizeObserver.observe(popover);
+	window.addEventListener('resize', update_position);
+	window.addEventListener('scroll', update_position);
+</script>
+
+<button id="md" class="menu-button" popovertarget="mdp"><img src="/menu.svg" /></button>
+
+<div popover id="mdp">
 	<ul class="menu-demo">
-		<li><a href="#">Edit</a></li>
-		<li><a href="#">Update</a></li>
-		<li><a href="#">Delete</a></li>
+		<li><a href="?order=desc">Newest To Oldest</a></li>
+		<li><a href="?order=asc">Oldest To Newest</a></li>
 	</ul>
 </div>
+
+<style>
+	div[popover] {
+		transition:
+			display 0.3s allow-discrete,
+			overlay 0.3s allow-discrete,
+			opacity 0.3s,
+			translate 0.3s;
+		opacity: 0;
+		translate: 0 30px;
+	}
+	div[popover]:popover-open {
+		opacity: 1;
+		translate: 0 0;
+	}
+
+	@starting-style {
+		div[popover]:popover-open {
+			opacity: 0;
+			translate: 0 30px;
+		}
+	}
+</style>

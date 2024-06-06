@@ -8,6 +8,7 @@ status: LIVE
 ---
 
 <script>
+	import Basic from '$/demos/popover/Basic.demo';
 	import Menu from '$/demos/popover/Menu.demo';
 	import Action from '$/demos/popover/Action.demo';
 </script>
@@ -20,7 +21,7 @@ status: LIVE
 
 Here is a basic popover. You can use these anytime you need something that overlays. Think a three dot menu, a login / user menu or settings of any kind.
 
-<Menu />
+<Basic />
 
 So what's the difference between popover and dialog? Dialog is more full featured and popover is more flexible. Dialog is also a semantic element for a dialog where popover is a generic attribute based API. I typically use Dialog for modals and alerts but popover for menus, tooltips, ect.
 
@@ -32,6 +33,9 @@ ___
 
 ## Menu w/ Compatible Anchor
 
+<Menu />
+
+<!-- TODO Show can i use popover here -->
 ___
 
 ## Menu w/ Anchor Positioning
