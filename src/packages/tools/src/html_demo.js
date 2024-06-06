@@ -73,9 +73,9 @@ export function html_demo(options = { theme: default_theme }) {
 	const highlighted = ${JSON.stringify(highlighted)};
 	
 	</script>
+	{@html md}
 	{@html highlighted}
-
-	{@html md}`,
+`,
 				};
 			}
 		},

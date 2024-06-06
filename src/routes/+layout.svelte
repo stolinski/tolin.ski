@@ -19,6 +19,7 @@
 
 </script>
 
+
 <Header />
 
 <main>
@@ -35,8 +36,6 @@
   <feBlend mode="color-burn" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" in2="blur" result="blend"></feBlend>
   
 </filter></defs><rect width="100vw" height="700" fill="url(#ffflux-gradient)" filter="url(#ffflux-filter)"></rect></svg>
-
-
 
 <style>
 

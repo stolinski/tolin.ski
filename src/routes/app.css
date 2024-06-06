@@ -158,3 +158,25 @@ div[popover] {
 	padding-inline: 20px;
 	padding-block: 20px;
 }
+
+::placeholder {
+	color: rgb(255 255 255 / 0.6);
+}
+
+dialog form {
+	height: 100%;
+}
+
+dialog input {
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: var(--highlight-border);
+}
+dialog textarea {
+	width: 100%;
+	padding-top: 1rem;
+	background: transparent;
+	border: none;
+	height: 100%;
+}

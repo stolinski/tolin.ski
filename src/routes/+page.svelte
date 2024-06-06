@@ -19,7 +19,10 @@
 				>
 			</p>
 
-			<p>Things will be broken and not great looking, but steadily improving as I work on this.</p>
+			<p>
+				Things will be broken and not great looking, but steadily improving as I work on this. It's
+				less than a week or two old
+			</p>
 		</div>
 
 		<iframe
