@@ -3,6 +3,7 @@ title: Modals Dialogs and Alerts
 date: '2024-05-30'
 tags:
   - html
+  - css
 category: cool-treats
 status: LIVE
 ---

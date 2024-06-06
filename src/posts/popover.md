@@ -3,6 +3,10 @@ title: Popover
 date: '2024-06-03'
 tags:
   - html
+  - css
+  - javascript
+  - browser apis
+  - animation
 category: cool-treats
 status: LIVE
 ---
@@ -51,10 +55,7 @@ But wait?! Is there a Polyfill?
 There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, so probably best to use the above listed compatible anchor strategy.
 
 
-___
-
-## What About JavaScript?
-
+<!-- TODO move tooltip to it's own file -->
 <!-- Tooltip demo -->
 
 

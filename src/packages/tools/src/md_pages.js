@@ -1,7 +1,6 @@
 import { dropInExcerpt } from './mdsvex_excerpts.js';
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import { getHighlighter } from 'shiki';
-import preserveCodeProperties from './prop_fences.js';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
@@ -17,7 +16,7 @@ let langs = ['javascript', 'typescript', 'css', 'html', 'svelte', 'jsx'];
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md', '.svx'],
-	remarkPlugins: [preserveCodeProperties, dropInExcerpt, [remarkToc, { tight: true }]],
+	remarkPlugins: [dropInExcerpt, [remarkToc, { tight: true }]],
 	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 	highlight: {
 		highlighter: async (code, lang = 'text') => {
