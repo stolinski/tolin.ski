@@ -48,4 +48,4 @@ Well that stinks. But it turns out writing this same feature using the Web Anima
 
 ### Can I use this?
 
-So, if I can't really use the css forward version, can I use this JS version? Yes! The only newer feature here is the Web Animations API with 97% support.
+Yes! The only newer feature here is the Web Animations API with 97% support.

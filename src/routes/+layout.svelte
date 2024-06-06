@@ -3,11 +3,11 @@
 	import './app.css';
 	import Header from '$routes/Header.svelte';
 	import Footer from '$routes/Footer.svelte';
+	import { page } from '$app/stores';  
 	import { onNavigate } from '$app/navigation'
 	let { children } = $props()
  
 	onNavigate((navigation) => {
-
 		if (!document.startViewTransition) return
 		return new Promise((resolve) => {
 			document.startViewTransition(async () => {
@@ -20,7 +20,9 @@
 </script>
 
 
+{#if !$page.url.pathname.includes('/demos')}
 <Header />
+{/if}
 
 <main>
 <div class="layout">
@@ -28,8 +30,11 @@
 </div>
 </main>
 
-
+{#if !$page.url.pathname.includes('/demos')}
 <Footer />
+{/if}
+
+
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 100vw 700" width="100vw" height="700" opacity="1"><defs><linearGradient gradientTransform="rotate(154, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%" id="ffflux-gradient"><stop stop-color="#191324" stop-opacity="1" offset="0%"></stop><stop stop-color="#ff25be" stop-opacity="1" offset="100%"></stop></linearGradient><filter id="ffflux-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
   <feTurbulence type="fractalNoise" baseFrequency="0.003 0.006" numOctaves="2" seed="2" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
   <feGaussianBlur stdDeviation="0 0" x="0%" y="0%" width="100%" height="100%" in="turbulence" edgeMode="duplicate" result="blur"></feGaussianBlur>
