@@ -54,6 +54,8 @@ Top layer is the fix for your z-index woes. It takes your content entirely out o
 
 ___
 
+<!-- TODO Move alert to it's own post -->
+
 ## Alert
 
 Nothing too fancy to make an alert, the dialog with showModal is the way to go here.
@@ -61,9 +63,6 @@ Nothing too fancy to make an alert, the dialog with showModal is the way to go h
 <Alert />
 
 ### Can I use Dialog today? - ✅ YES 96% Support
-
-<p class="ciu_embed" data-feature="mdn-html__elements__dialog" data-periods="future_1,current,past_1" data-accessible-colours="false">
-</p>
 
 ___
 

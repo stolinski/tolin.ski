@@ -16,9 +16,8 @@
 		let start = `0 0`;
 		let end = '0 100vb';
 		let translate = is_closing ? [start, end] : [end, start];
-		if (is_opening) {
-			dialog.showModal();
-		}
+
+		if (is_opening) dialog.showModal();
 
 		window.requestAnimationFrame(() => {
 			let animation = dialog.animate(

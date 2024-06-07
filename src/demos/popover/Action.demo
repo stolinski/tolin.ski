@@ -1,7 +1,6 @@
 <!-- DEMO -->
 <button popovertargetaction="show" popovertarget="ampd">Show</button>
-<button popovertargetaction="toggle" popovertarget="ampd">Toggle</button>
 
-<div popover id="ampd">
+<div popover id="ampd" class="menu">
 	<button popovertargetaction="hide" popovertarget="ampd">Hide</button>
 </div>

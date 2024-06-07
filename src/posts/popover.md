@@ -1,5 +1,5 @@
 ---
-title: Popover
+title: Menus Using Popover
 date: '2024-06-03'
 tags:
   - html
@@ -13,11 +13,12 @@ status: LIVE
 
 <script>
 	import Basic from '$/demos/popover/Basic.demo';
-	import Menu from '$/demos/popover/Menu.demo';
 	import Action from '$/demos/popover/Action.demo';
+	import Menu from '$/demos/popover/Menu.demo';
+	import Compat from '$/demos/popover/Compat.demo';
 </script>
 
-`popover` demos and exploration of menus
+An exploration of menus created with `popover`
 
 <!-- excerpt -->
 
@@ -29,20 +30,23 @@ Here is a basic popover. You can use these anytime you need something that overl
 
 So what's the difference between popover and dialog? Dialog is more full featured and popover is more flexible. Dialog is also a semantic element for a dialog where popover is a generic attribute based API. I typically use Dialog for modals and alerts but popover for menus, tooltips, ect.
 
+___
+
 ## Popover Actions
+
+You can do a lot with just html here if all you need is basic show and hide. It's only once we get into positioning & animations does this get a bit trickier.
 
 <Action />
 
 ___
 
-## Menu w/ Compatible Anchor
+## Menu w/ Anchor Positioning
+
+Here's where things get interesting.  This uses a few crazy new APIs, popover, anchor, @starting-style, allow-discrete. Basically a who's who of unsupported cool stuff. On top of that anchor is still greatly in flux.
+
+*Disclaimer* - This demo may or may not work. 🤷‍♂️
 
 <Menu />
-
-<!-- TODO Show can i use popover here -->
-___
-
-## Menu w/ Anchor Positioning
 
 ### Side note - Anchor Positioning
 
@@ -54,6 +58,13 @@ But wait?! Is there a Polyfill?
 
 There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, so probably best to use the above listed compatible anchor strategy.
 
+___
+
+## Menu w/ Compatible Anchor
+
+Let's say I wanted everything above, but using only shippable features.
+
+<Compat />
 
 <!-- TODO move tooltip to it's own file -->
 <!-- Tooltip demo -->

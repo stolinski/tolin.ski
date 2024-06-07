@@ -1,17 +1,10 @@
 <!-- DEMO -->
-<script>
-	let popover = document.getElementById('menu-demo-popover');
-	popover.addEventListener('click', (e) => {
-		if (e.target.tagName === 'A') {
-			popover.hidePopover();
-		}
-	});
-</script>
-
-<button popovertarget="menu-demo-popover">Sort By</button>
-<div popover id="menu-demo-popover">
+<button popovertarget="menu-demo-popover">Menu</button>
+<div popover id="menu-demo-popover" class="menu">
 	<ul class="menu-demo">
-		<li><a href="?order=desc">Newest To Oldest</a></li>
-		<li><a href="?order=asc">Oldest To Newest</a></li>
+		<li><a href="/settings">Settings</a></li>
+		<li><a href="/profile">My Profile</a></li>
+		<li><a href="/help">Help</a></li>
+		<li><a href="/logout">Logout</a></li>
 	</ul>
 </div>

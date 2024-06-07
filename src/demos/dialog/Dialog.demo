@@ -9,10 +9,10 @@
 
 <button id="open">Open</button>
 <dialog id="dialog">
-	<p>Newsletter Signup</p>
-	<p>Signup for the newsletter and get 20% off!</p>
+	<h3>Login</h3>
 	<form method="dialog">
-		<input type="text" placeholder="password" />
+		<input type="text" placeholder="username" />
+		<input type="password" placeholder="password" />
 		<button type="submit">Login</button>
 	</form>
 </dialog>
