@@ -25,7 +25,7 @@
 		transition-timing-function: ease-in;
 		opacity: 0;
 		translate: 0 30px;
-		position: fixed;
+		position: absolute;
 		inset: unset;
 		top: anchor(--menu bottom);
 		left: anchor(--menu left);

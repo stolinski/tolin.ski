@@ -50,13 +50,13 @@ Here's where things get interesting.  This uses a few crazy new APIs, popover, a
 
 ### Side note - Anchor Positioning
 
-Anchor positioning is a fix for elements placed in the top-layer where relative context doesn't exist. This is how you pin a menu to a location. It's great, but support sucks right now.
+Anchor positioning is a fix for elements placed in the top-layer where relative context doesn't exist. This is how you pin a menu to a location. It's great, but not only does support suck, the API itself is not agreed upon and still in flux. See: [Anchor Position Issues](https://github.com/WebKit/standards-positions/issues/216) 
 
-<h4 class="h3">Can I use anchor positioning? - ❔ No 48% support</h4>
+<h4 class="h3">Can I use anchor positioning? - ❔ Big No 48% support</h4>
 
 But wait?! Is there a Polyfill? 
 
-There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, so probably best to use the above listed compatible anchor strategy.
+There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, and the spec isn't final, so hold off for now.
 
 ___
 
@@ -66,10 +66,8 @@ Let's say I wanted everything above, but using only shippable features.
 
 <Compat />
 
-<!-- TODO move tooltip to it's own file -->
-<!-- Tooltip demo -->
-
 
 ## Further reading
 
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Popover_API)
+- [Anchor Position Issues](https://github.com/WebKit/standards-positions/issues/216)

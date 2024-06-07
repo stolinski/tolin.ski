@@ -229,3 +229,25 @@ dialog textarea {
 		}
 	}
 }
+
+#demo-mobile-nav {
+	border: none;
+	padding-block-start: 2rem;
+	box-shadow: -4px 3px 10px rgb(0 0 0 / 0.3);
+	&::backdrop {
+		background: rgb(0 0 0 / 0.1);
+	}
+	ul {
+		list-style: none;
+		li {
+			margin-bottom: 1rem;
+			font-size: var(--fs-m);
+		}
+	}
+
+	.demo-button {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+	}
+}
