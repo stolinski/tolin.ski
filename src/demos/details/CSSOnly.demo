@@ -1,13 +1,13 @@
 <!-- DEMO -->
 <details class="css-only">
 	<summary>Details</summary>
-	<div id="content-css-only">
+	<div id="demo-accordion-css">
 		<p>This is just a basic accordion</p>
 	</div>
 </details>
 
 <style>
-	.css-only #content-css-only {
+	.css-only #demo-accordion-css {
 		transition:
 			display 0.3s allow-discrete,
 			opacity 0.3s,
@@ -16,13 +16,13 @@
 		max-block-size: 0;
 	}
 
-	.css-only[open] #content-css-only {
+	.css-only[open] #demo-accordion-css {
 		opacity: 1;
 		max-block-size: 200px;
 	}
 
 	@starting-style {
-		.css-only[open] #content-css-only {
+		.css-only[open] #demo-accordion-css {
 			opacity: 0;
 			max-block-size: 0;
 		}

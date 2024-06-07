@@ -1,0 +1,66 @@
+<!-- DEMO -->
+<script>
+		const button = document.querySelector("button[popovertarget=demo-mobile-nav-waapi]");
+		const close_button = document.querySelector(".close");
+		const popover = document.querySelector("#demo-mobile-nav-waapi");
+
+		button.addEventListener("click", toggle);
+		close_button.addEventListener("click", toggle);
+
+		function toggle(e) {
+			const is_opening = !popover.matches(':popover-open');
+			e.preventDefault();
+			const translate = is_opening ? ['100vi', '0'] : ['0', '100vi'];
+
+
+			if (is_opening) popover.showPopover();
+
+			window.requestAnimationFrame(() => {
+				let animation = popover.animate(
+					{
+						translate,
+					},
+					{
+						duration: 300,
+						easing: 'ease-in-out',
+						fill: 'forwards',
+					},
+				);
+				animation.onfinish = () => {
+					if (!is_opening) popover.hidePopover();
+				};
+		})
+	}
+
+	document.addEventListener('keydown', (e) => {
+		if (
+			e.key === 'Escape' &&
+			popover.hasAttribute('popover') &&
+			popover.matches(':popover-open')
+		) {
+			toggle(e);
+		}
+	});
+</script>
+
+<button popovertarget="demo-mobile-nav-waapi">NAV</button>
+
+<nav popover id="demo-mobile-nav-waapi">
+	<button class="demo-button close">Close Nav</button>
+	<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Store</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+</nav>
+
+<style>
+	#demo-mobile-nav-waapi[popover] {
+		margin: 0;
+		block-size: 100vb;
+		inline-size: 90vi;
+		inset-inline-start: unset;
+		inset-inline-end: 0;
+	}
+</style>

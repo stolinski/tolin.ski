@@ -1,5 +1,5 @@
 ---
-title: Accordions and Details
+title: Accordions with <details>
 date: '2024-06-05'
 tags:
   - html
@@ -10,10 +10,10 @@ status: LIVE
 <script>
 	import Details from '$/demos/details/Details.demo';
 	import Caret from '$/demos/details/Caret.demo';
-	import DetailsAnimatedJS from '$/demos/details/DetailsAnimatedJS.demo';
+	import WAAPI from '$/demos/details/WAAPI.demo';
 	import CSSOnly from '$/demos/details/CSSOnly.demo';
 	import Exclusive from '$/demos/details/Exclusive.demo';
-	import DetailsAnimatedPageTransition from '$/demos/details/DetailsAnimatedPageTransition.demo';
+	import ViewTransitions from '$/demos/details/ViewTransitions.demo';
 </script>
 
 `<details>` demos and exploration of html accordions.
@@ -28,23 +28,7 @@ status: LIVE
 
 <Caret />
 
-___
 
-## Animate According with JS
-
-Get ready, it's about to be heavy.
-
-<DetailsAnimatedJS />
-
-___
-
-## Animate According with JS
-
-Woof, no wonder we reach for JS frameworks. It's not too crazy but it's a lot of JS just to animate an accordion. Remember `.slideDown();`.
-
-This next one is good, less code, but the container itself still isn't sliding without adding in a custom JS height animation.
-
-<DetailsAnimatedPageTransition />
 
 ## A CSS Only Accordion with `<details>`
 
@@ -55,6 +39,25 @@ It feels like this should work and maybe it's just a browser issue / quirk that 
 ### WTF is max-block-size
 
 max-block-size === max-height. Well.. kinda, it's the logical property version of max-height. This supports all type directions instead of just top to bottom, left to right. This is the same as things like margin-block, margin-inline. It has full browser support, so update your brain matter and use block-size and inline-size.
+
+___
+
+## Animate According with JavaScript via View Transitions
+
+Woof, no wonder we reach for JS frameworks. It's not too crazy but it's a lot of JS just to animate an accordion. Remember `.slideDown();`.
+
+This next one is good, less code, but the container itself still isn't sliding without adding in a custom JS height animation.
+
+<ViewTransitions />
+
+___
+
+## Animate According with JavaScript via WAAPI
+
+Get ready, it's about to be heavy.
+
+<WAAPI />
+
 
 ## Exclusive Accordions
 

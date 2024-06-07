@@ -143,6 +143,14 @@ summary {
 details {
 	padding-inline: 1rem;
 	border: var(--highlight-border);
+	p:first-child {
+		margin-top: 0;
+		padding-top: 1rem;
+	}
+	p:last-child {
+		margin-bottom: 0;
+		padding-bottom: 1rem;
+	}
 }
 
 /* DEMO Specific CSS */
@@ -200,6 +208,7 @@ dialog input {
 	margin-block-end: 1rem;
 	border-bottom: var(--highlight-border);
 }
+
 dialog textarea {
 	width: 100%;
 	padding-top: 1rem;
@@ -230,7 +239,9 @@ dialog textarea {
 	}
 }
 
-#demo-mobile-nav {
+#demo-mobile-nav,
+#demo-mobile-nav-js,
+#demo-mobile-nav-waapi {
 	border: none;
 	padding-block-start: 2rem;
 	box-shadow: -4px 3px 10px rgb(0 0 0 / 0.3);
