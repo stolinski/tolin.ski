@@ -28,7 +28,7 @@ Here is a basic popover. You can use these anytime you need something that overl
 
 <Basic />
 
-So what's the difference between popover and dialog? Dialog is more full featured and popover is more flexible. Dialog is also a semantic element for a dialog where popover is a generic attribute based API. I typically use Dialog for modals and alerts but popover for menus, tooltips, ect.
+So what's the difference between popover and dialog? 1. Popover doesn't inflict inert onto your page. 2. Dialog can be on toplayer or not, Popover is on toplayer.
 
 ___
 
