@@ -1,43 +1,39 @@
 <!-- DEMO -->
 <script>
-		const button = document.querySelector("button[popovertarget=demo-mobile-nav-waapi]");
-		const close_button = document.querySelector(".close");
-		const popover = document.querySelector("#demo-mobile-nav-waapi");
+	const button = document.querySelector('button[popovertarget=demo-mobile-nav-waapi]');
+	const close_button = document.querySelector('.close');
+	const popover = document.querySelector('#demo-mobile-nav-waapi');
 
-		button.addEventListener("click", toggle);
-		close_button.addEventListener("click", toggle);
+	button.addEventListener('click', toggle);
+	close_button.addEventListener('click', toggle);
 
-		function toggle(e) {
-			const is_opening = !popover.matches(':popover-open');
-			e.preventDefault();
-			const translate = is_opening ? ['100vi', '0'] : ['0', '100vi'];
+	function toggle(e) {
+		e.preventDefault();
 
+		const is_opening = !popover.matches(':popover-open');
+		const translate = is_opening ? ['100vi', '0'] : ['0', '100vi'];
 
-			if (is_opening) popover.showPopover();
+		if (is_opening) popover.showPopover();
 
-			window.requestAnimationFrame(() => {
-				let animation = popover.animate(
-					{
-						translate,
-					},
-					{
-						duration: 300,
-						easing: 'ease-in-out',
-						fill: 'forwards',
-					},
-				);
-				animation.onfinish = () => {
-					if (!is_opening) popover.hidePopover();
-				};
-		})
+		window.requestAnimationFrame(() => {
+			let animation = popover.animate(
+				{
+					translate,
+				},
+				{
+					duration: 300,
+					easing: 'ease-in-out',
+					fill: 'forwards',
+				},
+			);
+			animation.onfinish = () => {
+				if (!is_opening) popover.hidePopover();
+			};
+		});
 	}
 
 	document.addEventListener('keydown', (e) => {
-		if (
-			e.key === 'Escape' &&
-			popover.hasAttribute('popover') &&
-			popover.matches(':popover-open')
-		) {
+		if (e.key === 'Escape' && popover.hasAttribute('popover') && popover.matches(':popover-open')) {
 			toggle(e);
 		}
 	});

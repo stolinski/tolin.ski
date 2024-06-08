@@ -14,8 +14,8 @@ status: LIVE
 <script>
 	import Basic from '$/demos/popover/Basic.demo';
 	import Action from '$/demos/popover/Action.demo';
-	import Menu from '$/demos/popover/Menu.demo';
 	import Compat from '$/demos/popover/Compat.demo';
+	import Anchor from '$/demos/popover/Anchor.demo';
 </script>
 
 An exploration of menus created with `popover`
@@ -40,13 +40,21 @@ You can do a lot with just html here if all you need is basic show and hide. It'
 
 ___
 
+## Menu w/ Compatible Anchor
+
+Let's say I wanted everything above, but using only shippable features.
+
+<Compat />
+
+___
+
 ## Menu w/ Anchor Positioning
 
 Here's where things get interesting.  This uses a few crazy new APIs, popover, anchor, @starting-style, allow-discrete. Basically a who's who of unsupported cool stuff. On top of that anchor is still greatly in flux.
 
 *Disclaimer* - This demo may or may not work. 🤷‍♂️
 
-<Menu />
+<Anchor />
 
 ### Side note - Anchor Positioning
 
@@ -58,13 +66,6 @@ But wait?! Is there a Polyfill?
 
 There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, and the spec isn't final, so hold off for now.
 
-___
-
-## Menu w/ Compatible Anchor
-
-Let's say I wanted everything above, but using only shippable features.
-
-<Compat />
 
 
 ## Further reading

@@ -1,9 +1,9 @@
 <!-- DEMO -->
 <script>
-	const button = document.querySelector("button[popovertarget=demo-mobile-nav-vt]");
-	const popover = document.querySelector("#demo-mobile-nav-vt");
+	const button = document.querySelector('button[popovertarget=demo-mobile-nav-vt]');
+	const popover = document.querySelector('#demo-mobile-nav-vt');
 
-	button.addEventListener("click", toggle);
+	button.addEventListener('click', toggle);
 
 	function toggle(e) {
 		const is_opening = !popover.matches(':popover-open');
@@ -13,15 +13,11 @@
 				return popover.showPopover();
 			}
 			return popover.hidePopover();
-		})
+		});
 	}
 
 	document.addEventListener('keydown', (e) => {
-		if (
-			e.key === 'Escape' &&
-			popover.hasAttribute('popover') &&
-			popover.matches(':popover-open')
-		) {
+		if (e.key === 'Escape' && popover.hasAttribute('popover') && popover.matches(':popover-open')) {
 			toggle(e);
 		}
 	});

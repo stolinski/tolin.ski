@@ -10,8 +10,9 @@ category: cool-treats
 status: LIVE
 ---
 <script>
-	import NoJS from '$/demos/mobile-nav/NoJS.demo'
+	import CSSOnly from '$/demos/mobile-nav/CSSOnly.demo'
 	import WAAPI from '$/demos/mobile-nav/WAAPI.demo'
+	import ViewTransitions from '$/demos/mobile-nav/ViewTransitions.demo'
 </script>
 
 How to make a mobile nav with `popover` using only browser APIs.
@@ -22,7 +23,11 @@ How to make a mobile nav with `popover` using only browser APIs.
 
 This is a mobile nav using the popover API. The animation is only supported in Chrome currently because it uses `@starting-style` and `allow-discrete`. Hopefully these APIs drop across all browsers soon. Either way, check it out, it's super simple and accessible, with no JavaScript.
 
-<NoJS />
+<CSSOnly />
+
+## Mobile Nav with Popover and View Transitions
+
+<ViewTransitions />
 
 ## Mobile Nav with Popover and WAAPI
 

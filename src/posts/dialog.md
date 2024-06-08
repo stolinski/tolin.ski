@@ -12,8 +12,9 @@ status: LIVE
 	import Dialog from "$/demos/dialog/Dialog.demo";
 	import Modal from "$/demos/dialog/Modal.demo";
 	import Alert from "$/demos/dialog/Alert.demo";
-	import AnimatedJS from "$/demos/dialog/AnimatedJS.demo";
-	import AnimatedCSS from "$/demos/dialog/AnimatedCSS.demo";
+	import CSS from "$/demos/dialog/CSS.demo";
+	import ViewTransitions from "$/demos/dialog/ViewTransitions.demo";
+	import WAAPI from "$/demos/dialog/WAAPI.demo";
 </script>
 
 `<dialog>` demos and exploration to solving different problems.
@@ -62,7 +63,9 @@ Nothing too fancy to make an alert, the dialog with showModal is the way to go h
 
 <Alert />
 
-### Can I use Dialog today? - ✅ YES 96% Support
+### Can I use Dialog today?
+
+✅ YES 96% Support
 
 ___
 
@@ -72,13 +75,13 @@ ___
 
 To animate a dialog with JS, you can use any number of your own JS framework libraries, or you can do it directly with the view transitions API. This approach is much less supported but requires no additional libraries.
 
-<AnimatedJS />
+<ViewTransitions />
 
 ___
 
 ### The CSS Solution
 
-<AnimatedCSS />
+<CSS />
 
 ### Side Note - Starting Style
 
@@ -101,3 +104,7 @@ Well, close the dialog and see the issue. When dialog is toggled, `display:none;
 <h4 class="h3">Can I use allow-discrete? - YES Possibly 77% support</h4>
 
 Firefox support coming August 6th, is in Nightly already.
+
+## Interesting Reading
+
+[Should we deprecate dialog.show()](https://github.com/whatwg/html/issues/9376)

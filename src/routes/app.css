@@ -21,6 +21,7 @@
 	--teal: #82d8d8;
 	--green: #a8fe38;
 	--red: #f88070;
+	--yellow: #efc05e;
 	--dark-purp: #191324;
 	--white: #eee;
 	--fg: var(--white);
@@ -84,8 +85,8 @@ aside nav {
 }
 
 a {
-	color: var(--teal);
-	text-decoration-color: var(--pink);
+	color: var(--white);
+	text-decoration-color: var(--teal);
 	text-decoration-line: underline;
 	text-decoration-thickness: 3px;
 }
@@ -240,7 +241,7 @@ dialog textarea {
 }
 
 #demo-mobile-nav,
-#demo-mobile-nav-js,
+#demo-mobile-nav-vt,
 #demo-mobile-nav-waapi {
 	border: none;
 	padding-block-start: 2rem;

@@ -1,14 +1,14 @@
 <!-- DEMO -->
 <script>
-	const dialog = document.querySelector('#dialog');
+	const dialog = document.querySelector('#demo-drawer-css');
 	const open = document.querySelector('#trigger');
-	const close = document.querySelector('#dialog .close');
+	const close = document.querySelector('#demo-drawer-css .close');
 	open.addEventListener('click', () => dialog.showModal());
 	close.addEventListener('click', () => dialog.close());
 </script>
 
 <button id="trigger">Open Dialog</button>
-<dialog id="dialog">
+<dialog id="demo-drawer-css">
 	<button class="close">Cancel</button>
 	<h3>Create a new issue</h3>
 	<form method="dialog">
@@ -19,7 +19,7 @@
 </dialog>
 
 <style>
-	#dialog {
+	#demo-drawer-css {
 		transition:
 			display 0.5s allow-discrete,
 			overlay 0.5s allow-discrete,

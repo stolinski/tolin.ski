@@ -6,9 +6,15 @@ tags:
 category: cool-treats
 status: DRAFT
 ---
+<script>
+	import CSSOnly from '$/demos/tooltip/CSSOnly.demo'
+</script>
+
 
 Tooltip demos using the `popover` api.
 
 <!-- Excerpt -->
 
-TODO Decide if this is necessary for the talk.
+## CSS Only Tooltip
+
+<CSSOnly />

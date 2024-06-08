@@ -1,14 +1,14 @@
 <!-- DEMO -->
 <script>
-	const trigger = document.getElementById('open_modal');
-	const dialog = document.getElementById('modal');
+	const trigger = document.querySelector('#demo-modal-open');
+	const dialog = document.querySelector('#demo-modal');
 	trigger.addEventListener('click', () => {
 		dialog.showModal();
 	});
 </script>
 
-<button id="open_modal">Open</button>
-<dialog id="modal">
+<button id="demo-modal-open">Open</button>
+<dialog id="demo-modal">
 	<p>Login</p>
 	<form method="dialog">
 		<input type="text" placeholder="username" />

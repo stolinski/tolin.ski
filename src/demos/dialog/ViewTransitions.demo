@@ -1,8 +1,8 @@
 <!-- DEMO -->
 <script>
-	const dialog = document.getElementById('animated_dialog');
-	const open = document.getElementById('animated_open');
-	const form = document.getElementById('animated_form');
+	const dialog = document.querySelector('#demo-dialog-vt');
+	const open = document.querySelector('#demo-dialog-open');
+	const form = document.querySelector('#demo-dialog-vt form');
 
 	open.addEventListener('click', open_dialog);
 	form.addEventListener('submit', close_dialog);
@@ -14,18 +14,18 @@
 	}
 
 	function close_dialog(e) {
-		e.preventDefault(); // Prevent the default form submission
-		const form = e.target; // Get the form element
+		e.preventDefault();
+		const form = e.target;
 		document.startViewTransition(() => {
 			form.submit();
 		});
 	}
 </script>
 
-<button id="animated_open">Open Dialog</button>
-<dialog id="animated_dialog">
+<button id="demo-dialog-open">Open Dialog</button>
+<dialog id="demo-dialog-vt">
 	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
-	<form id="animated_form" method="dialog">
+	<form method="dialog">
 		<button>OK 👍</button>
 	</form>
 </dialog>

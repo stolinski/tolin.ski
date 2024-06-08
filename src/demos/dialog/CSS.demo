@@ -1,15 +1,15 @@
 <!-- DEMO -->
 <script>
-	const dialog = document.getElementById('css_dialog');
-	const open = document.getElementById('css_open');
+	const dialog = document.getElementById('demo-dialog-css');
+	const open = document.getElementById('demo-dialog-css-open');
 	open.addEventListener('click', open_dialog);
 	function open_dialog() {
 		dialog.showModal();
 	}
 </script>
 
-<button id="css_open">Open Dialog</button>
-<dialog id="css_dialog">
+<button id="demo-dialog-css-open">Open Dialog</button>
+<dialog id="demo-dialog-css">
 	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
 	<form method="dialog">
 		<button>OK 👍</button>
@@ -17,7 +17,7 @@
 </dialog>
 
 <style>
-	#css_dialog {
+	#demo-dialog-css {
 		&,
 		::backdrop {
 			transition:
