@@ -20,7 +20,7 @@
 </script>
 
 
-{#if !$page.url.pathname.includes('/demos')}
+{#if !$page.url.pathname.includes('/demos/')}
 <Header />
 {/if}
 
@@ -30,7 +30,7 @@
 </div>
 </main>
 
-{#if !$page.url.pathname.includes('/demos')}
+{#if !$page.url.pathname.includes('/demos/')}
 <Footer />
 {/if}
 

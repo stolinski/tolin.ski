@@ -1,11 +1,12 @@
 ---
-title: How to make a slide show with CSS Scroll Snap
+title: Swipers & Slide Shows with Scroll Snap
 date: '2024-06-08'
 tags:
   - css
   - javascript
   - scroll-snap
   - swiper
+  - slide-show
 category: cool-treats
 status: LIVE
 ---
@@ -19,7 +20,6 @@ status: LIVE
 An exploration of swipers and slide shows using modern browser features like CSS Scroll Snap
 
 <!-- excerpt -->
-
 
 ## A Basic CSS Only Swiper using CSS Scroll Snap
 
@@ -36,12 +36,16 @@ FYI this basketball is really sick and actually for sale here: [Syntax Basketbal
 * Automatic 
 * Events? (only if you need it)
 
-## How to make an Instagram Style Swiper
+___
+
+## A Swiper With Active Indicators
 
 If we want indicators to show what slide we're on, buttons and timing, we'll need to add a bit of JavaScript. Let's do it
 
 <SwiperIndicators />
 
-## Let's Make A Slideshow
+___
+
+## Let's Make A Simple Slideshow
 
 <SlideShow />
