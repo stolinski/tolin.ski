@@ -9,7 +9,7 @@ status: LIVE
 ---
 <script>
 	import HTML from '$/demos/drawer/HTML.demo'
-	import Dialog from '$/demos/drawer/CSS.demo'
+	import CSS from '$/demos/drawer/CSS.demo'
 	import DialogJS from '$/demos/drawer/DialogJS.demo'
 </script>
 

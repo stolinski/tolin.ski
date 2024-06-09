@@ -1,5 +1,4 @@
 import type { Post } from '$types/types';
-import { desluggify } from '@drop-in/tools';
 
 export function get_all_posts() {
 	let posts: Post[] = [];

@@ -11,3 +11,6 @@ The compendium for Install Nothing @ JSNation June 13th 2024.
 
 <!-- excerpt -->
 
+## Compendium
+
+[Dialogs and Modals](https://tolin.ski/cool-treats/dialog)

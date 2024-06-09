@@ -5,7 +5,6 @@ tags:
   - html
   - css
   - javascript
-  - browser apis
   - animation
 category: cool-treats
 status: LIVE

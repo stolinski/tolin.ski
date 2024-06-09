@@ -5,10 +5,10 @@
 
 <div popover id="anchored-menu" class="menu">
 	<ul class="menu-demo">
-		<li><a href="/settings">Settings</a></li>
-		<li><a href="/profile">My Profile</a></li>
-		<li><a href="/help">Help</a></li>
-		<li><a href="/logout">Logout</a></li>
+		<li><a href="#">Settings</a></li>
+		<li><a href="#">My Profile</a></li>
+		<li><a href="#">Help</a></li>
+		<li><a href="#">Logout</a></li>
 	</ul>
 </div>
 
