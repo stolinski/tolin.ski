@@ -1,7 +1,7 @@
 <!-- DEMO -->
 <script>
 	const dialog = document.querySelector('#demo-dialog-vt');
-	const open = document.querySelector('#demo-dialog-open');
+	const open = document.querySelector('#demo-dialog-vt-open');
 	const form = document.querySelector('#demo-dialog-vt form');
 
 	open.addEventListener('click', open_dialog);
@@ -22,7 +22,7 @@
 	}
 </script>
 
-<button id="demo-dialog-open">Open Dialog</button>
+<button id="demo-dialog-vt-open">Open Dialog</button>
 <dialog id="demo-dialog-vt">
 	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
 	<form method="dialog">
