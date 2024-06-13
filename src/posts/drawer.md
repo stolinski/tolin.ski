@@ -39,7 +39,7 @@ Yes! The only newer feature here is the Web Animations API with 97% support.
 
 Choosing between the popover API and the dialog API has been a bit of a back and forth for me. Here is a version of a slide up drawer built with `<dialog>`
 
-This version uses a few weakly supported APIs, so for non-experimental usecases see the JS version below.
+This version uses a few weakly supported APIs, so for non-experimental use cases see the JS version below.
 
 ___
 

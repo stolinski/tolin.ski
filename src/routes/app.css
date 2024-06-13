@@ -31,10 +31,6 @@
 	--highlight-border: 1px solid rgb(255 255 255 / 0.1);
 }
 
-html {
-	color-scheme: dark light;
-}
-
 body {
 	background: var(--bg);
 	color: var(--fg);
@@ -187,7 +183,8 @@ div[popover] {
 
 dialog {
 	border: none;
-	background: var(--black);
+	background: var(--fg);
+	color: var(--bg);
 	border-radius: 10px;
 	box-shadow: 4px 3px 10px rgb(0 0 0 / 0.3);
 	> *:first-child {
@@ -200,14 +197,54 @@ dialog {
 
 dialog form {
 	height: 100%;
+	color: var(--bg);
 }
 
 dialog input {
 	width: 100%;
+	color: var(--bg);
 	background: transparent;
 	border: none;
 	margin-block-end: 1rem;
 	border-bottom: var(--highlight-border);
+}
+
+a:focus,
+button:focus {
+	outline: solid 1px blue;
+}
+
+[id^='demo-mobile-nav'],
+[id^='demo-drawer'] {
+	background: var(--bg);
+	color: var(--fg);
+}
+
+#demo-modal,
+#demo-dialog-waapi,
+#demo-dialog-vt,
+#demo-dialog-css {
+	color: var(--bg);
+	background: var(--fg);
+	input {
+		border: solid 1px var(--bg);
+		border-radius: 4px;
+		&:focus {
+			outline: solid 1px blue;
+		}
+		&::placeholder {
+			color: var(--bg);
+			opacity: 0.3;
+		}
+	}
+	button {
+		color: var(--fg);
+		background: var(--bg);
+	}
+	button {
+		border: solid 1px var(--bg);
+		border-radius: 4px;
+	}
 }
 
 dialog textarea {
