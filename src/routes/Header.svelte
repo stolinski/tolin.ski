@@ -1,5 +1,10 @@
 <script lang="ts">
 	import { settings } from '$settings';
+	import { theme } from '$lib/theme.svelte';
+
+	function oninput(e) {
+		theme.theme = e.target.value || 'level-up';
+	}
 </script>
 
 <header class="layout">
@@ -14,6 +19,13 @@
 				<!-- <li><a href="/rss.xml">Feed</a></li> -->
 			</ul>
 		</nav>
+		<label class="theme-select"
+			>Theme
+			<select {oninput} name="theme" id="theme">
+				<option value="level-up">Level Up</option>
+				<option value="syntax">Syntax</option>
+			</select>
+		</label>
 	</div>
 </header>
 
@@ -23,9 +35,10 @@
 	}
 
 	.content {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: 25% 50% 25%;
 		align-items: center;
+		padding-block: 0.5rem;
 	}
 
 	header {
@@ -35,14 +48,25 @@
 		color: var(--fg);
 		text-decoration: none;
 	}
+
+	p {
+		margin: 0;
+	}
+
 	nav ul {
 		list-style: none;
 		margin: 0;
+		justify-content: center;
 		padding: 0;
 		display: flex;
 		gap: 25px;
 	}
 	nav ul li {
 		font-size: var(--fs-xs);
+		text-transform: lowercase;
+	}
+
+	.theme-select {
+		text-align: right;
 	}
 </style>
