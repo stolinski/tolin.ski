@@ -7,7 +7,8 @@
 
 <div class="layout-sidebar-inverse full" style:--max-width="1200px" style:--side-bar-width="20%">
 	<section class="content">
-		<h1>{data.category}</h1>
+		<p class="mini-title">Category</p>
+		<h1 class="title">{data.category}</h1>
 		<div class="category-description">
 			<svelte:component this={data.content} />
 		</div>

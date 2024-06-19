@@ -7,7 +7,8 @@
 
 <div class="layout-sidebar-inverse full" style:--max-width="1200px" style:--side-bar-width="20%">
 	<section class="content">
-		<h1>{data.tag}</h1>
+		<p class="mini-title">Tag</p>
+		<h1 class="title">{data.tag}</h1>
 		{#if data.posts.length > 0}
 			{#each data.posts as post}
 				<PostListing {post} />

@@ -11,16 +11,16 @@
 
 <header class="layout">
 	<div class="content">
+		<!-- <nav> -->
+		<!-- Add your nav -->
+		<!-- <ul> -->
+		<!-- <li><a href="/">Blog</a></li> -->
+		<!-- <li><a href="/demos">Demos</a></li> -->
+		<!-- <li><a href="/uses">Uses</a></li> -->
+		<!-- <li><a href="/rss.xml">Feed</a></li> -->
+		<!-- </ul> -->
+		<!-- </nav> -->
 		<p class="logo"><a href="/">{settings.app_name}</a></p>
-		<nav>
-			<!-- Add your nav -->
-			<ul>
-				<li><a href="/">Blog</a></li>
-				<li><a href="/demos">Demos</a></li>
-				<li><a href="/uses">Uses</a></li>
-				<!-- <li><a href="/rss.xml">Feed</a></li> -->
-			</ul>
-		</nav>
 		{#if browser}
 			<label class="theme-select" transition:fade
 				>Theme
@@ -35,14 +35,15 @@
 
 <style>
 	.logo {
-		font-style: italic;
+		font-style: normal;
 		font-size: var(--fs-xs);
+		text-transform: uppercase;
 		font-variation-settings: 'wght' 900;
 	}
 
 	.content {
-		display: grid;
-		grid-template-columns: 25% 50% 25%;
+		display: flex;
+		justify-content: space-between;
 		align-items: center;
 		padding-block: 0.5rem;
 	}

@@ -184,6 +184,12 @@ details {
 	}
 }
 
+.title {
+	font-style: normal;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
 .mini-title {
 	font-size: var(--fs-xxs);
 	text-transform: uppercase;
