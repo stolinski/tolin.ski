@@ -21,3 +21,23 @@
 		<Tags tags={data.tags} />
 	</aside>
 </div>
+
+<style>
+	.title {
+		view-transition-name: slide;
+	}
+
+	@keyframes slide {
+		from {
+			translate: -100vi;
+		}
+	}
+
+	::view-transition-old(slide) {
+		animation: 300ms ease-in reverse forwards slide;
+	}
+
+	::view-transition-new(slide) {
+		animation: 300ms ease-out forwards slide;
+	}
+</style>

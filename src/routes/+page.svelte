@@ -2,14 +2,11 @@
 	import Categories from '$lib/Categories.svelte';
 	import PostListing from '$lib/PostListing.svelte';
 	import Tags from '$lib/Tags.svelte';
-	import { settings } from '$settings';
 	const { data } = $props();
 </script>
 
 <div class="layout-sidebar-inverse full" style:--max-width="1200px" style:--side-bar-width="20%">
 	<section class="content">
-		<h1 class="visually-hidden">{settings.app_name}</h1>
-
 		<div class="disclaimer">
 			<p>
 				Hi, I'm Scott Tolinski. This site is under construction and a WIP. If you are interested in

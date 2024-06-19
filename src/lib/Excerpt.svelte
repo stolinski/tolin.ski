@@ -8,10 +8,6 @@
 </div>
 
 <style>
-	div {
-		view-transition-name: var(--transition-name);
-	}
-
 	.PAGE {
 		text-align: center;
 	}

@@ -17,6 +17,7 @@
 }
 
 body {
+	--fs-xxxs: clamp(0.51rem, 0.611765vi + 0.36rem, 0.77rem);
 	--fs-xxs: clamp(0.64rem, 0.752941vi + 0.45rem, 0.96rem);
 	--fs-xs: clamp(0.8rem, 0.941176vi + 0.56rem, 1.2rem);
 	--fs-base: clamp(1rem, 1.176471vi + 0.71rem, 1.5rem);

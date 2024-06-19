@@ -7,6 +7,7 @@
 	import { onNavigate } from '$app/navigation'
 	import { theme } from "$/lib/theme.svelte";
 	import { fade } from "svelte/transition";
+	import HomeHeader from "$/lib/HomeHeader.svelte";
 
 	let { children } = $props()
 	
@@ -28,7 +29,9 @@
 </script>
 
 
-{#if !$page.url.pathname.includes('/demos/')}
+{#if $page.url.pathname == '/'}
+<HomeHeader />
+{:else}
 <Header />
 {/if}
 
