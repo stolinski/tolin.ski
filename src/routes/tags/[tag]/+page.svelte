@@ -29,7 +29,8 @@
 
 	@keyframes slide {
 		from {
-			translate: -100vi;
+			translate: -20vi;
+			opacity: 0;
 		}
 	}
 
