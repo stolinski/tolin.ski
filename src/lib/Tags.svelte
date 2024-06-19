@@ -9,7 +9,7 @@
 </script>
 
 <section class="tags">
-	<h3 class="h4">Tags</h3>
+	<h3 class="mini-title">Tags</h3>
 	<ul class="no-list">
 		<PostTags {tags} />
 	</ul>

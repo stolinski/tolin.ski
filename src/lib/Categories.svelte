@@ -12,7 +12,7 @@
 	} = $props();
 </script>
 
-<h3 class="h4">Categories</h3>
+<h3 class="mini-title">Categories</h3>
 <section class="categories">
 	<ul class="no-list">
 		{#each categories as category}
@@ -30,7 +30,7 @@
 
 	li {
 		margin-bottom: 0.5rem;
-		font-size: var(--fs-xs);
+		font-size: var(--fs-xxs);
 	}
 
 	a {

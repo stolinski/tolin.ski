@@ -28,7 +28,17 @@
 		text-decoration: none;
 		padding: 4px;
 		border-radius: 4px;
+		font-size: var(--fs-xxs);
 		background: rgb(255 255 255 / 0.1);
 		border: var(--highlight-border);
+		transition:
+			0.5s background ease,
+			0.2s color ease,
+			0.6s scale ease;
+		&:hover {
+			background: var(--accent);
+			color: var(--bg);
+			scale: 1.05;
+		}
 	}
 </style>

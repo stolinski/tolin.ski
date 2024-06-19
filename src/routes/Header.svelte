@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { settings } from '$settings';
 	import { theme } from '$lib/theme.svelte';
+	import { browser } from '$app/environment';
+	import { fade } from 'svelte/transition';
 
 	function oninput(e) {
 		theme.theme = e.target.value || 'level-up';
@@ -19,19 +21,23 @@
 				<!-- <li><a href="/rss.xml">Feed</a></li> -->
 			</ul>
 		</nav>
-		<label class="theme-select"
-			>Theme
-			<select {oninput} name="theme" id="theme">
-				<option value="level-up">Level Up</option>
-				<option value="syntax">Syntax</option>
-			</select>
-		</label>
+		{#if browser}
+			<label class="theme-select" transition:fade
+				>Theme
+				<select value={theme.theme} {oninput} name="theme" id="theme">
+					<option value="level-up">Level Up</option>
+					<option value="syntax">Syntax</option>
+				</select>
+			</label>
+		{/if}
 	</div>
 </header>
 
 <style>
 	.logo {
 		font-style: italic;
+		font-size: var(--fs-xs);
+		font-variation-settings: 'wght' 900;
 	}
 
 	.content {
@@ -68,5 +74,9 @@
 
 	.theme-select {
 		text-align: right;
+		font-size: var(--fs-xxs);
+		select {
+			font-size: var(--fs-xxs);
+		}
 	}
 </style>

@@ -17,6 +17,18 @@
 }
 
 body {
+	--fs-xxs: clamp(0.64rem, 0.752941vi + 0.45rem, 0.96rem);
+	--fs-xs: clamp(0.8rem, 0.941176vi + 0.56rem, 1.2rem);
+	--fs-base: clamp(1rem, 1.176471vi + 0.71rem, 1.5rem);
+	--fs-s: clamp(1.25rem, 1.482353vi + 0.88rem, 1.88rem);
+	--fs-m: clamp(1.56rem, 1.835294vi + 1.1rem, 2.34rem);
+	--fs-l: clamp(1.95rem, 2.305882vi + 1.37rem, 2.93rem);
+	--fs-xl: clamp(2.44rem, 2.870588vi + 1.72rem, 3.66rem);
+	--fs-xxl: clamp(3.05rem, 3.6vi + 2.15rem, 4.58rem);
+	--fs-xxxl: clamp(3.81rem, 4.494118vi + 2.69rem, 5.72rem);
+
+	--line-height: calc(2px + 2ex + 2px);
+
 	--pink: #ff25be;
 	--teal: #82d8d8;
 	--green: #a8fe38;
@@ -170,6 +182,13 @@ details {
 		margin-bottom: 0;
 		padding-bottom: 1rem;
 	}
+}
+
+.mini-title {
+	font-size: var(--fs-xxs);
+	text-transform: uppercase;
+	font-style: normal;
+	opacity: 0.6;
 }
 
 /* DEMO Specific CSS */
