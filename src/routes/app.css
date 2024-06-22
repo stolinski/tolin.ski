@@ -189,6 +189,7 @@ details {
 	font-style: normal;
 	margin-top: 0;
 	text-transform: uppercase;
+	view-transition-name: slide;
 }
 
 .mini-title {
@@ -196,6 +197,33 @@ details {
 	text-transform: uppercase;
 	font-style: normal;
 	opacity: 0.6;
+}
+
+/* .category {
+	view-transition-name: slide-mini;
+} */
+
+@keyframes slide {
+	from {
+		translate: -20vi;
+		opacity: 0;
+	}
+}
+
+::view-transition-old(slide) {
+	animation: 300ms ease-in reverse forwards slide;
+}
+
+::view-transition-new(slide) {
+	animation: 300ms ease-out forwards slide;
+}
+
+::view-transition-old(slide-mini) {
+	animation: 300ms ease-in reverse forwards slide;
+}
+
+::view-transition-new(slide-mini) {
+	animation: 300ms ease-out forwards slide;
 }
 
 /* DEMO Specific CSS */

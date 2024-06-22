@@ -11,7 +11,6 @@
 
 	let { children } = $props()
 	
- 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return
 		return new Promise((resolve) => {
@@ -59,6 +58,7 @@
 	main {
 		border-top: 1px solid rgb(255 255 255 / 0.1);
 	}
+
 	svg {
 		  position: absolute;
     top: 0;
