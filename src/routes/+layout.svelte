@@ -27,6 +27,10 @@
 
 </script>
 
+<div class="disclaimer">
+	🚧 Please excuse my dust. This site is under construction 🚧
+</div>
+
 
 {#if $page.url.pathname == '/'}
 <HomeHeader />
@@ -34,7 +38,7 @@
 <Header />
 {/if}
 
-<main>
+<main class:topbar={$page.url.pathname !== '/'}>
 	<div class="layout">
 		{@render children()}
 	</div>
@@ -55,7 +59,14 @@
 
 <style>
 
-	main {
+	.disclaimer {
+		text-align: center;
+		padding: 5px 0;
+		font-size: var(--xxs);
+		background: var(--black);
+	}
+
+	main.topbar {
 		border-top: 1px solid rgb(255 255 255 / 0.1);
 	}
 

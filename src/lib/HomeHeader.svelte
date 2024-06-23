@@ -5,6 +5,10 @@
 
 <header class="layout">
 	<div class="content header-content">
+		<div>
+			<a href="https://syntax.fm">The Syntax Podcast</a>
+			<a href="https://github.com/stolinski">GitHub</a>
+		</div>
 		<ThemePicker />
 	</div>
 	<section class="content">
@@ -16,7 +20,7 @@
 <style>
 	.header-content {
 		display: flex;
-		justify-content: end;
+		justify-content: space-between;
 		align-items: center;
 		padding-block: 0.5rem;
 	}
@@ -29,6 +33,7 @@
 	}
 
 	.pre-title {
+		margin-inline: auto;
 		font-size: var(--fs-l);
 		text-align: center;
 	}
