@@ -48,7 +48,7 @@
 		"package": "svelte-kit package",
 		"prepare": "svelte-kit sync",
 		"preview": "vite preview",
-		"postbuild": "svelte-sitemap --domain https://tolin.ski --reset-time"
+		"sitemap": "svelte-sitemap --domain https://tolin.ski --reset-time"
 	},
 	"type": "module",
 	"version": "0.0.3",
