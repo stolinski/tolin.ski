@@ -4,7 +4,7 @@ date: '2024-06-26'
 tags:
   - javascript
   - local-first
-  - 
+  - sqlite
 category: posts
 status: LIVE
 ---
