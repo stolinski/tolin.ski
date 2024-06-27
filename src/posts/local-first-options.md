@@ -65,7 +65,6 @@ Compared to Triplit, I found this to be slightly more verbose. Where Triplit sub
 * Relational data
 * Backup DB
 
-
 ## Give Me More Control
 
 Many of these options provide you the syncing layer and the local db layer but don't give you a backend. This makes them more interesting for people who want to integrate into their existing stack. Doing more is certainly not an awful thing when the result is more control, you have more work todo yourself.
@@ -88,7 +87,7 @@ Once again this gives you the most complex aspect, the sync layer while letting 
 
 Another really appealing thing with ElectricSQL is that is uses an in browser SQLite instead of Indexedb
 
-#### Pricing
+#### ElectricSQL Pricing
 
 This is a self hosted option and is free to use because of that. There are instructions on how to use with Docker, DigitalOcean, Kbernetes, Supabase and more. 
 
@@ -96,12 +95,11 @@ This is a self hosted option and is free to use because of that. There are instr
 
 While this option is very flexible, there is a distinct focus on ease of use here. However since there are great integrations for things like Prisma, it means that if you are off that happy path, this isn't for you. Overall for a middle of the road version of "do it all for me" ElectricSQL is one of the most interesting options.
 
-
 ### PouchDB
 
 https://pouchdb.com
 
-TODO Pouch seems interesting, but there is a whole world of Couch and PouchDb that I need to explore more before having an opinion on it.
+Pouch seems interesting, but there is a whole world of Couch and PouchDb that I need to explore more before having an opinion on it.
 
 ### TinyBase
 
@@ -129,7 +127,8 @@ Replicache is a super enticing option. It's a client-side sync framework and it 
 
 #### The Bummer
 
-Cost here is the big bummer. The good news is that it's free for non-commercial projects but expensive for commecrial products ($500/m with <1k profiles> && <$200k ARR>). There is also no self hosted version that I could find. This is a serious option for serious business or people wanting to learn.
+Cost here is the big bummer. The good news is that it's free for non-commercial projects but expensive for commecrial products ($500/m with less than 1k profiles and less than $200k ARR>). There is also no self hosted version that I could find. This is a serious option for serious business or people wanting to learn.
+
 
 
 #### Backend Strategies
@@ -158,4 +157,4 @@ Give some of these a try. If you are looking to try it out for the first time, t
 
 Local First software imo is the next big thing. Now's a great time to pick up some sick techniques.
 
-- Scott
+Scott
