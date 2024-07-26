@@ -8,6 +8,7 @@
 		"remark-parse": "^11.0.0",
 		"shiki": "^1.6.3",
 		"svelte-parse": "^0.1.0",
+		"temporal-polyfill": "^0.2.5",
 		"unified": "^11.0.4",
 		"unist-util-visit": "^5.0.0"
 	},
