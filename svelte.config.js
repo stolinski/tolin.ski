@@ -1,7 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { md_pages, html_demo } from '@drop-in/tools';
-import syntax_theme from './src/syntax.json' assert { type: 'json' };
+import syntax_theme from './src/syntax.json' with { type: 'json' };
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {

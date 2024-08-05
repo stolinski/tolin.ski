@@ -57,6 +57,7 @@ export function html_demo(options = { theme: default_theme }) {
 				content.includes('<!-- DEMO -->')
 			) {
 				const { insideScript, outsideScript } = parseContent(content);
+
 				// Removes comment at top of file
 				const content_without_demo_comment = content.replace('<!-- DEMO -->\n', '');
 
@@ -71,7 +72,7 @@ export function html_demo(options = { theme: default_theme }) {
 	}
 	const md = ${JSON.stringify(outsideScript)};
 	const highlighted = ${JSON.stringify(highlighted)};
-	
+
 	</script>
 	{@html md}
 	{@html highlighted}
