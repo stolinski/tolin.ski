@@ -11,4 +11,8 @@
 	div {
 		padding-block: 1rem;
 	}
+
+	:global(iframe) {
+		width: 100%;
+	}
 </style>

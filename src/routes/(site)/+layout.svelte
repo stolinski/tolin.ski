@@ -1,8 +1,8 @@
 <script lang="ts">
 	import "@drop-in/theme";
 	import './app.css';
-	import Header from '$routes/Header.svelte';
-	import Footer from '$routes/Footer.svelte';
+	import Header from '$/routes/(site)/Header.svelte';
+	import Footer from '$/routes/(site)/Footer.svelte';
 	import { page } from '$app/stores';  
 	import { onNavigate } from '$app/navigation'
 	import { theme } from "$/lib/theme.svelte";

@@ -9,6 +9,7 @@ status: LIVE
 ---
 <script>
 	import Basic from '$/demos/color-scheme/Basic.demo';
+	import System from '$/demos/color-scheme/System.iframe.demo';
 </script>
 
 
@@ -17,6 +18,8 @@ CSS offers some really excellent features to handle theming these days
 <!-- excerpt -->
 
 ## Theme Color
+
+<System />
 
 Have you ever seen websites that change the browser's header color? Specifically mobile chrome, Safari on iOS and MacOS.
 
