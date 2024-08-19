@@ -1,21 +1,21 @@
 <div class="scope">
 	<div class="wrapper">
-		<section>
+		<section id="section1">
 			<div class="container">
 				<h1>Scroll Animations Demo</h1>
 			</div>
 		</section>
-		<section>
+		<section id="section2">
 			<div class="container">
 				<h2>Hi, this is neat</h2>
 			</div>
 		</section>
-		<section>
+		<section id="section3">
 			<div class="container">
 				<h2>A big ole scrollin' zone</h2>
 			</div>
 		</section>
-		<section>
+		<section id="section4">
 			<div class="container">
 				<h2>No JavaScript</h2>
 			</div>
