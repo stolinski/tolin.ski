@@ -8,15 +8,6 @@ category: cool-treats
 status: LIVE
 ---
 
-<script>
-	import Dialog from "$/demos/dialog/Dialog.demo";
-	import Modal from "$/demos/dialog/Modal.demo";
-	import Alert from "$/demos/dialog/Alert.demo";
-	import CSS from "$/demos/dialog/CSS.demo";
-	import ViewTransitions from "$/demos/dialog/ViewTransitions.demo";
-	import WAAPI from "$/demos/dialog/WAAPI.demo";
-</script>
-
 `<dialog>` demos and exploration to solving different problems.
 
 <!-- excerpt -->
@@ -30,7 +21,8 @@ A dialog is a basic popup window.
 - There is no backdrop
 - Not on top layer
 
-<Dialog />
+$$ dialog-Dialog
+
 
 ___
 
@@ -44,7 +36,7 @@ A dialog that takes over.
 - On top layer
 - Esc closes
 
-<Modal />
+$$ dialog-Modal
 
 ### Side Note - Top Layer
 
@@ -61,7 +53,7 @@ ___
 
 Nothing too fancy to make an alert, the dialog with showModal is the way to go here.
 
-<Alert />
+$$ dialog-Alert
 
 ### Can I use Dialog today?
 
@@ -75,13 +67,13 @@ ___
 
 To animate a dialog with JS, you can use any number of your own JS framework libraries, or you can do it directly with the view transitions API. This approach is much less supported but requires no additional libraries.
 
-<ViewTransitions />
+$$ dialog-ViewTransitions
 
 ___
 
 ### The CSS Solution
 
-<CSS />
+$$ dialog-CSS
 
 ### Side Note - Starting Style
 

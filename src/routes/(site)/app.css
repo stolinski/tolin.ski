@@ -80,7 +80,7 @@ h6 {
 	color: #d6deeb;
 	tab-size: 20px;
 	overflow: scroll;
-	font-size: var(--fs-xs);
+	font-size: var(--fs-xxs);
 	line-height: 1.5;
 	border-radius: 10px;
 	box-shadow: 4px 3px 10px rgb(0 0 0 / 0.3);
@@ -375,4 +375,134 @@ dialog textarea {
 		top: 1rem;
 		right: 1rem;
 	}
+}
+
+h1,
+.h1,
+.hxl,
+h2,
+.h2,
+.hl,
+h3,
+.h3,
+.hm,
+h4,
+.h4,
+.hs,
+h5,
+.h5,
+.hxs,
+h6,
+.h6 {
+	margin-block: 1em;
+	line-height: var(--line-height);
+	text-wrap: balance;
+}
+
+.hxl {
+	font-size: var(--fs-xl);
+}
+
+h1,
+.h1,
+.hl {
+	font-size: var(--fs-xl);
+	font-variation-settings: 'wght' 900;
+}
+
+h2,
+.h2,
+.hm {
+	font-style: italic;
+	margin-block-start: 2em;
+	font-size: var(--fs-l);
+	font-variation-settings: 'wght' 900;
+}
+
+h3,
+.h3,
+.hs {
+	margin-block-start: 2em;
+	font-size: var(--fs-m);
+}
+
+h4,
+.h4,
+.hxs {
+	font-size: var(--fs-s);
+}
+
+h5,
+.h5,
+p,
+.p,
+li {
+	font-size: var(--fs-base);
+}
+
+h6,
+.s {
+	font-size: var(--fs-s);
+}
+
+.xs {
+	font-size: var(--fs-xs);
+}
+
+.layout > * {
+	grid-column: content / content-end;
+}
+
+.layout .sub {
+	grid-template-columns: subgrid;
+	display: grid;
+}
+
+/* Sidebar class (1/4 width) */
+.layout .sidebar {
+	@media (width < 700px) {
+		grid-column: content / span 3;
+	}
+	@media (width < 500px) {
+		grid-column: content / content-end;
+	}
+	grid-column: content / span 3;
+}
+
+/* Main content area class */
+.layout .main {
+	grid-column: col-start 3 / content-end;
+	@media (width < 500px) {
+		grid-column: content / content-end;
+	}
+}
+
+.layout .col {
+	grid-column: col-start round(down, mod(calc(var(--start) - 1), var(--gcs)) + 1) / span
+		var(--span, 'end');
+}
+
+/* Sidebar class (1/4 width) */
+.layout .invert-sidebar {
+	@media (width < 1000px) {
+		--start: 7;
+		--span: 3;
+	}
+	@media (width < 500px) {
+		grid-column: content / content-end;
+	}
+
+	--start: 10;
+	--span: 5;
+}
+
+/* Main content area class */
+.layout .invert-main {
+	@media (width < 1000px) {
+		grid-column: col-start / span 11;
+	}
+	@media (width < 500px) {
+		grid-column: content / content-end;
+	}
+	grid-column: col-start / span 17;
 }

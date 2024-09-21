@@ -1,16 +1,16 @@
 <script lang="ts">
-	import "@drop-in/theme";
+	import "@drop-in/graffiti";
 	import './app.css';
-	import Header from '$/routes/(site)/Header.svelte';
-	import Footer from '$/routes/(site)/Footer.svelte';
+	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import { page } from '$app/stores';  
 	import { onNavigate } from '$app/navigation'
-	import { theme } from "$/lib/theme.svelte";
+	import { theme } from "$lib/theme.svelte";
 	import { fade } from "svelte/transition";
-	import HomeHeader from "$/lib/HomeHeader.svelte";
+	import HomeHeader from "$lib/HomeHeader.svelte";
 
 	let { children } = $props()
-	
+
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return
 		return new Promise((resolve) => {
@@ -24,7 +24,6 @@
 	$effect(() => {
 		theme.load_state();
 	})
-
 </script>
 
 <div class="disclaimer">

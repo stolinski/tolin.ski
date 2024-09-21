@@ -1,0 +1,22 @@
+<style>
+	::marker,
+	::-webkit-details-marker {
+		display: none;
+	}
+
+	summary {
+		list-style: none;
+	}
+
+	details summary:before {
+		content: '→';
+		display: inline-block;
+		rotate: 0deg;
+		margin-inline-end: 0.5em;
+		transition: rotate 0.3s ease-in-out;
+	}
+
+	details[open] > summary:before {
+		rotate: 90deg;
+	}
+</style>

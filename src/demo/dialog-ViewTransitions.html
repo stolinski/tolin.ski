@@ -1,0 +1,34 @@
+<script>
+	window.onload = function () {
+		if (typeof window !== 'undefined') {
+			const dialog = document.querySelector('#demo-dialog-vt');
+			const open = document.querySelector('#demo-dialog-vt-open');
+			const form = document.querySelector('#demo-dialog-vt form');
+
+			open.addEventListener('click', open_dialog);
+			form.addEventListener('submit', close_dialog);
+
+			function open_dialog() {
+				document.startViewTransition(() => {
+					dialog.showModal();
+				});
+			}
+
+			function close_dialog(e) {
+				e.preventDefault();
+				const form = e.target;
+				document.startViewTransition(() => {
+					form.submit();
+				});
+			}
+		}
+	};
+</script>
+
+<button id="demo-dialog-vt-open">Open Dialog</button>
+<dialog id="demo-dialog-vt">
+	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
+	<form method="dialog">
+		<button>OK 👍</button>
+	</form>
+</dialog>

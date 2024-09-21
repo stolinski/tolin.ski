@@ -15,7 +15,7 @@ function create_theme_state() {
 		set theme(value) {
 			theme = value;
 			localStorage.setItem('theme', value);
-			document.body.classList = value;
+			if (value) document.body.classList = value;
 		},
 		load_state,
 	};

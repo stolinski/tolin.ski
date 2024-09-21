@@ -10,6 +10,7 @@
 <style>
 	.PAGE {
 		text-align: center;
+		margin-inline: auto;
 	}
 
 	.PAGE :global(*) {

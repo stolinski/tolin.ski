@@ -9,14 +9,6 @@ tags:
 category: cool-treats
 status: LIVE
 ---
-
-<script>
-	import Basic from '$/demos/popover/Basic.demo';
-	import Action from '$/demos/popover/Action.demo';
-	import Compat from '$/demos/popover/Compat.demo';
-	import Anchor from '$/demos/popover/Anchor.demo';
-</script>
-
 An exploration of menus created with `popover`
 
 <!-- excerpt -->
@@ -25,7 +17,7 @@ An exploration of menus created with `popover`
 
 Here is a basic popover. You can use these anytime you need something that overlays. Think a three dot menu, a login / user menu or settings of any kind.
 
-<Basic />
+$$ popover-Basic
 
 So what's the difference between popover and dialog? 1. Popover doesn't inflict inert onto your page. 2. Dialog can be on toplayer or not, Popover is on toplayer.
 
@@ -35,7 +27,7 @@ ___
 
 You can do a lot with just html here if all you need is basic show and hide. It's only once we get into positioning & animations does this get a bit trickier.
 
-<Action />
+$$ popover-Action
 
 ___
 
@@ -43,7 +35,7 @@ ___
 
 Let's say I wanted everything above, but using only shippable features.
 
-<Compat />
+$$ popover-Compat
 
 ___
 
@@ -53,7 +45,7 @@ Here's where things get interesting.  This uses a few crazy new APIs, popover, a
 
 *Disclaimer* - This demo may or may not work. 🤷‍♂️
 
-<Anchor />
+$$ popover-Anchor
 
 ### Side note - Anchor Positioning
 
@@ -64,7 +56,6 @@ Anchor positioning is a fix for elements placed in the top-layer where relative 
 But wait?! Is there a Polyfill? 
 
 There is, [Anchor Polyfill](https://github.com/oddbird/css-anchor-positioning) but, it's not currently current to the spec, and the spec isn't final, so hold off for now.
-
 
 
 ## Further reading

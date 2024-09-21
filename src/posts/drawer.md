@@ -8,9 +8,7 @@ category: cool-treats
 status: LIVE
 ---
 <script>
-	import HTML from '$/demos/drawer/HTML.demo'
-	import CSS from '$/demos/drawer/CSS.demo'
-	import DialogJS from '$/demos/drawer/DialogJS.demo'
+
 </script>
 
 How to make a drawer with `<dialog>` using only browser APIs.
@@ -21,7 +19,7 @@ How to make a drawer with `<dialog>` using only browser APIs.
 
 Here is the general HTML Structure we're working with. Without the CSS and JS, nothing will happen.
 
-<HTML />
+$$ drawer-html
 
 ___
 
@@ -29,7 +27,7 @@ ___
 
 Well that stinks. But it turns out writing this same feature using the Web Animations API isn't too rough. I'm sure this once could even be further cleaned up. 
 
-<DialogJS />
+$$ drawer-js
 
 ### Can I use this?
 
@@ -43,7 +41,7 @@ This version uses a few weakly supported APIs, so for non-experimental use cases
 
 ___
 
-<CSS />
+$$ drawer-css
 
 ### Can I Use this? 
 

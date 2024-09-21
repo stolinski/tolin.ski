@@ -1,9 +1,10 @@
 import { dropInExcerpt } from './mdsvex_excerpts.js';
 import { mdsvex, escapeSvelte } from 'mdsvex';
-import { getHighlighter } from 'shiki';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
+import examples from './examples.js';
+import { createHighlighter } from 'shiki';
 
 /**
  * @typedef Options
@@ -13,23 +14,26 @@ import remarkToc from 'remark-toc';
 
 let langs = ['javascript', 'typescript', 'css', 'html', 'svelte', 'jsx'];
 
-/** @type {import('mdsvex').MdsvexOptions} */
-const mdsvexOptions = {
-	extensions: ['.md', '.svx'],
-	remarkPlugins: [dropInExcerpt, [remarkToc, { tight: true }]],
-	rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
-	highlight: {
-		highlighter: async (code, lang = 'text') => {
-			const highlighter = await getHighlighter({
-				themes: ['night-owl'],
-				langs,
-			});
-			await highlighter.loadLanguage('javascript', 'typescript', 'css', 'html', 'svelte', 'jsx');
-			const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'night-owl' }));
-			return `{@html \`${html}\` }`;
+function mdsvexOptions(options) {
+	const { theme } = options;
+	return {
+		extensions: ['.md', '.svx'],
+		remarkPlugins: [dropInExcerpt, examples, [(remarkToc, { tight: true })]],
+		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+		highlight: {
+			highlighter: async (code, lang = 'text') => {
+				const highlighter = await createHighlighter({
+					themes: [theme],
+					langs,
+				});
+
+				await highlighter.loadLanguage('javascript', 'typescript', 'css', 'html', 'svelte', 'jsx');
+				const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'syntax' }));
+				return `{@html \`${html}\` }`;
+			},
 		},
-	},
-};
+	};
+}
 
 /**
  *
@@ -37,7 +41,6 @@ const mdsvexOptions = {
  * @returns
  */
 export function md_pages(options) {
-	return mdsvex(mdsvexOptions);
+	const mdsvex_options = mdsvexOptions(options);
+	return mdsvex(mdsvex_options);
 }
-
-// TODO make options actually do something

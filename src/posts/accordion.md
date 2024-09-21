@@ -7,34 +7,25 @@ category: cool-treats
 status: LIVE
 ---
 
-<script>
-	import Details from '$/demos/details/Details.demo';
-	import Caret from '$/demos/details/Caret.demo';
-	import WAAPI from '$/demos/details/WAAPI.demo';
-	import CSSOnly from '$/demos/details/CSSOnly.demo';
-	import Exclusive from '$/demos/details/Exclusive.demo';
-	import ViewTransitions from '$/demos/details/ViewTransitions.demo';
-</script>
-
 `<details>` demos and exploration of html accordions.
 
 <!-- excerpt -->
 
 ## Basic Accordion with `<details>`
 
-<Details />
+$$ details-details
 
 ### Animating the caret 
 
-<Caret />
 
+$$ details-caret
 
 
 ## A CSS Only Accordion with `<details>`
 
 It feels like this should work and maybe it's just a browser issue / quirk that it doesn't currently. Maybe by the time you're looking at this it's ✨flawless✨. 
 
-<CSSOnly />
+$$ details-CSSOnly
 
 ### WTF is max-block-size
 
@@ -48,7 +39,7 @@ Woof, no wonder we reach for JS frameworks. It's not too crazy but it's a lot of
 
 This next one is good, less code, but the container itself still isn't sliding without adding in a custom JS height animation.
 
-<ViewTransitions />
+$$ details-ViewTransitions
 
 ___
 
@@ -56,11 +47,11 @@ ___
 
 Get ready, it's about to be heavy.
 
-<WAAPI />
+$$ details-WAAPI
 
 
 ## Exclusive Accordions
 
 By giving an accordion a name attribute, you can make it part of a group of "exclusive" accordions where only one with the same name can be open at a time.
 
-<Exclusive />
+$$ details-Exclusive

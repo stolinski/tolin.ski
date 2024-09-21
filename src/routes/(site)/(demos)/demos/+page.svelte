@@ -8,7 +8,7 @@
 	<h2>{parent}</h2>
 	<ul>
 		{#each children as child}
-			<li><a href={`/demos/${parent}/${child}`}>{child}</a></li>
+			<li><a href={`/demos/${child.path}`}>{child.name}</a></li>
 		{/each}
 	</ul>
 {/each}

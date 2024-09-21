@@ -1,0 +1,20 @@
+<script>
+	window.onload = function () {
+		if (typeof window !== 'undefined') {
+			const trigger = document.getElementById('demo-dialog-alert-open');
+			const dialog = document.getElementById('demo-dialog-alert');
+			trigger.addEventListener('click', () => {
+				dialog.showModal();
+			});
+		}
+	};
+</script>
+
+<button id="demo-dialog-alert-open">Remind Me</button>
+<dialog id="demo-dialog-alert">
+	<h3>Stay Up to Date</h3>
+	<form method="dialog">
+		<button type="submit">Allow Notifications</button>
+		<button class="close" type="reset">Close</button>
+	</form>
+</dialog>

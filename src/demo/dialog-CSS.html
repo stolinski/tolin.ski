@@ -1,0 +1,49 @@
+<script>
+	window.onload = function () {
+		if (typeof window !== 'undefined') {
+			const dialog = document.getElementById('demo-dialog-css');
+			const open = document.getElementById('demo-dialog-css-open');
+			open.addEventListener('click', open_dialog);
+			function open_dialog() {
+				dialog.showModal();
+			}
+		}
+	};
+</script>
+
+<button id="demo-dialog-css-open">Open Dialog</button>
+<dialog id="demo-dialog-css">
+	<p>Oh hey, I didn't see you there. I'm looking for some new 😎 code, can you help?</p>
+	<form method="dialog">
+		<button>OK 👍</button>
+	</form>
+</dialog>
+
+<style>
+	#demo-dialog-css {
+		&,
+		::backdrop {
+			transition:
+				display 0.3s allow-discrete,
+				overlay 0.3s allow-discrete,
+				translate 0.3s,
+				opacity 0.3s;
+			opacity: 0;
+			translate: 0 20px;
+		}
+
+		&[open],
+		&[open]::backdrop {
+			opacity: 1;
+			translate: 0 0;
+		}
+
+		@starting-style {
+			&[open],
+			&[open]::backdrop {
+				opacity: 0;
+				translate: 0 20px;
+			}
+		}
+	}
+</style>

@@ -7,11 +7,6 @@ tags:
 category: cool-treats
 status: LIVE
 ---
-<script>
-	import Basic from '$/demos/color-scheme/Basic.demo';
-	import System from '$/demos/color-scheme/System.iframe.demo';
-</script>
-
 
 CSS offers some really excellent features to handle theming these days
 
@@ -19,7 +14,7 @@ CSS offers some really excellent features to handle theming these days
 
 ## Theme Color
 
-<System />
+$$ color_scheme-system
 
 Have you ever seen websites that change the browser's header color? Specifically mobile chrome, Safari on iOS and MacOS.
 
@@ -29,16 +24,18 @@ Notice how the header hear matches the background of the color.
 
 So how do we do this? It's very easy with a meta tag.
 
-```
+```html
 <meta name="theme-color" content="#00ff00">
+
 ```
 
 Just include this bad boy in your in your `<head>` and you're all good.
 
 If you'd like to set this dynamically with JavaScript it's just 
 
-```
+```javascript
 document.querySelector("meta[name='theme-color']").content = '#00ff00';
+
 ```
 
 Note, you can't use css vars here, which would make this dynamic color easier.
@@ -46,9 +43,10 @@ Note, you can't use css vars here, which would make this dynamic color easier.
 ### Media Prefers Color Scheme
 
 
-```
+```html
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff" />
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000" />
+
 ```
 
 You can also control for prefers color scheme light or dark. This can be handy for making dark and light mode look good. But we haven't talked about color-scheme yet, so let's talk abou that.
@@ -59,13 +57,14 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme
 
 Color Scheme is very interesting because even if you are theming websites with color, this helps with the contrast between light/dark/system colors. A common way to use this is by setting a `color-scheme: light dark;` in your :root CSS selector. What this says is that your element (in this case the :root) can be rendered as light and dark mode. This works very well with the next `light-dark()` that we'll talk about next, but it also changes the default styles. So by simply adding
 
-```
+```css
 color-scheme: dark;
+
 ```
 
 you get dark defaults. Let's see this in action.
 
-<Basic />
+$$ color_scheme-basic
 
 This demo is fairly trite, but notice how the initial font-color changes when you change the color scheme. This will even differ depending on if you have your system set to light or dark mode. For instance a value of "light dark" will use which ever you have selected. 
 
@@ -74,7 +73,7 @@ This demo is fairly trite, but notice how the initial font-color changes when yo
 
 Light dark is a function that takes two parameters, the light mode value and the dark mode value.
 
-```
+```css
 div {
 	background: light-dark(#fff, #000);
 }
@@ -98,7 +97,7 @@ accent-color changes the styles of input type checkbox, raido, range and the pro
 
 This is a small one, but you can adjust the text caret in form inputs with 
 
-```
+```css
 input {
 	caret-color: red;
 }
@@ -112,7 +111,7 @@ Last but not least, you can style the text selection in CSS with this bit of CSS
 
 All you need is to use the ::selection pseudo element. You can use it on it's own like this
 
-```
+```css
 ::selection {
 	color: black;
 	background: yellow;
