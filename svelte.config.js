@@ -1,6 +1,6 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import { md_pages, html_demo, iframe_demo, html_d } from '@drop-in/tools';
+import { md_pages, html_d } from '@drop-in/tools';
 import syntax_theme from './src/syntax.js';
 
 /** @type {import('@sveltejs/kit').Config} */
