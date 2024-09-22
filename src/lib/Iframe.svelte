@@ -2,6 +2,7 @@
 	import { getHighlighter } from '$/highlighter';
 	import css from '@drop-in/graffiti?raw';
 	import css_base from '../routes/(site)/app.css?raw';
+	import { browser } from '$app/environment';
 
 	let { path } = $props();
 	let raw: string = $state('');
@@ -24,16 +25,18 @@
 	}
 </script>
 
-<div class="code-side">
-	{#await importRawCode() then}
-		<div class="iframe">
-			<iframe srcdoc={raw} frameborder="0"></iframe>
-		</div>
-		{@html shiki_code}
-	{:catch}
-		<p>Error</p>
-	{/await}
-</div>
+{#if browser}
+	<div class="code-side">
+		{#await importRawCode() then}
+			<div class="iframe">
+				<iframe srcdoc={raw} frameborder="0"></iframe>
+			</div>
+			{@html shiki_code}
+		{:catch}
+			<p>Error</p>
+		{/await}
+	</div>
+{/if}
 
 <style>
 	iframe {

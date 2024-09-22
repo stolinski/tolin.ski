@@ -14,7 +14,7 @@ const config = {
 	],
 	extensions: ['.svelte', '.svx', '.md', '.html', '.demo', '.iframe.demo'],
 	kit: {
-		adapter: adapter({ fallback: 'index.html' }),
+		adapter: adapter(),
 		prerender: {
 			handleHttpError: 'warn',
 		},
