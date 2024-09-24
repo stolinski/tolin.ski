@@ -51,20 +51,20 @@
 		inline-size: 90vi;
 		inset-inline-start: unset;
 		inset-inline-end: 0;
-		view-transition-name: slide;
+		view-transition-name: slide-mobile-nav-demo;
 	}
 
-	@keyframes slide {
+	@keyframes slide-mobile-nav-demo {
 		from {
 			translate: 100vi;
 		}
 	}
 
-	::view-transition-old(slide) {
-		animation: 300ms ease-in reverse forwards slide;
+	::view-transition-old(slide-mobile-nav-demo) {
+		animation: 300ms ease-in reverse forwards slide-mobile-nav-demo;
 	}
 
-	::view-transition-new(slide) {
-		animation: 300ms ease-out forwards slide;
+	::view-transition-new(slide-mobile-nav-demo) {
+		animation: 300ms ease-out forwards slide-mobile-nav-demo;
 	}
 </style>

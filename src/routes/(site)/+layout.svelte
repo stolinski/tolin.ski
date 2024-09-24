@@ -1,5 +1,5 @@
 <script lang="ts">
-	import "@drop-in/graffiti";
+	import '@drop-in/graffiti';
 	import './app.css';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
@@ -37,7 +37,7 @@
 <Header />
 {/if}
 
-<main class:topbar={$page.url.pathname !== '/'}>
+<main class:topbar={$page.url.pathname !== '/'} id="main">
 	<div class="layout">
 		{@render children()}
 	</div>

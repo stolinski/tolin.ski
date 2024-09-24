@@ -17,12 +17,10 @@
 	}
 
 	function change_mode(mode: string) {
-		console.log('mode', mode);
 		swapBodyClass(mode);
 	}
 
 	function change_theme(theme: string) {
-		console.log('theme', theme);
 		swapBodyClass(theme, 'theme-');
 	}
 </script>

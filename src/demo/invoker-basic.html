@@ -1,0 +1,18 @@
+<script
+	type="module"
+	async
+	src="https://unpkg.com/invokers-polyfill@latest/invoker.min.js"
+></script>
+
+<!-- DOESN'T WORK YET -->
+<section>
+	<div class="row">
+		<button command="step-down" commandfor="num">-</button>
+		<input type="number" id="num" value="0" />
+		<button command="step-up" commandfor="num">+</button>
+	</div>
+
+	<!-- WORKS -->
+	<button commandfor="my-dialog" command="show-modal">Open Dialog!</button>
+	<dialog id="my-dialog">I'm a dialog!</dialog>
+</section>

@@ -31,6 +31,8 @@
 
 <style>
 	.scope {
+		background: rebeccapurple;
+		color: white;
 		timeline-scope: --scroller;
 		--total_slides: 4;
 	}
@@ -92,7 +94,7 @@
 			width: 20px;
 			height: 20px;
 			border-radius: 50%;
-			background-color: #000;
+			background-color: #fff;
 			opacity: 0.1;
 			animation: indicator linear;
 			animation-timeline: --scroller;
