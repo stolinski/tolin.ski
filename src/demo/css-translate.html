@@ -1,0 +1,40 @@
+<div class="box"></div>
+<div class="old"></div>
+
+<style>
+	.box {
+		height: 200px;
+		width: 200px;
+		background-color: red;
+		translate: -100vi 0;
+		animation:
+			one 4s infinite,
+			two 0.5s infinite;
+	}
+
+	@keyframes one {
+		100% {
+			translate: 100vi 0;
+		}
+	}
+
+	@keyframes two {
+		100% {
+			rotate: 360deg;
+		}
+	}
+
+	.old {
+		height: 200px;
+		width: 200px;
+		background-color: blue;
+		animation: old 4s infinite;
+		transform: translate(-100vi, 0) rotate(0deg);
+	}
+
+	@keyframes old {
+		100% {
+			transform: translate(100vi, 0) rotate(1080deg);
+		}
+	}
+</style>
