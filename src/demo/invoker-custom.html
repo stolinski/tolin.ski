@@ -1,0 +1,36 @@
+<script>
+	window.onload = function () {
+		const myImg = document.querySelector('#my-img');
+		let size = 1;
+		myImg.addEventListener('command', (event) => {
+			if (event.command == '--shrink') {
+				size -= 0.5;
+			} else if (event.command == '--grow') {
+				size += 0.5;
+			} else if (event.command == '--reset') {
+				size = 1;
+			}
+			myImg.style.scale = `${size}`;
+		});
+	};
+</script>
+
+<img id="my-img" src="https://picsum.photos/200/300" />
+<div class="actions">
+	<button commandfor="my-img" command="--shrink">Shrink</button>
+	<button commandfor="my-img" command="--grow">Grow</button>
+	<button commandfor="my-img" command="--reset">Reset</button>
+</div>
+
+<style>
+	#my-img {
+		transition: scale 0.3s ease;
+	}
+	.actions {
+		display: flex;
+		gap: 1rem;
+		position: absolute;
+		inset: auto 0 0 0;
+		justify-content: center;
+	}
+</style>
