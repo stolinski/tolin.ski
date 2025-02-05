@@ -11,9 +11,11 @@
 		</div>
 		<ThemePicker />
 	</div>
-	<section class="content">
+	<section class="content billboard">
 		<h1 class="site-title" style:--transition-name="scott-tolinski">{settings.app_name}</h1>
-		<p class="pre-title readable">I'm a web developer who likes to share what I learn.</p>
+		<p class="pre-title readable">
+			Hey, what's up? I'm Scott, the Co-host of Syntax.fm and creator of Level Up Tutorials
+		</p>
 	</section>
 </header>
 
@@ -36,5 +38,8 @@
 		margin-inline: auto;
 		font-size: var(--fs-l);
 		text-align: center;
+	}
+	.billboard {
+		margin-bottom: 5rem;
 	}
 </style>

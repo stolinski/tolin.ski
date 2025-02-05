@@ -14,6 +14,7 @@
 	.logo {
 		font-style: normal;
 		font-size: var(--fs-xs);
+		font-family: '🆒';
 		text-transform: uppercase;
 		font-variation-settings: 'wght' 900;
 	}

@@ -16,11 +16,14 @@
 
 <style>
 	article {
-		margin-bottom: 4rem;
+		margin-bottom: 6rem;
+		h2 {
+			margin-top: 0;
+		}
 	}
 
 	h2 {
-		margin-block: 4rem 0;
+		margin-block: 7rem 0;
 	}
 
 	.date {

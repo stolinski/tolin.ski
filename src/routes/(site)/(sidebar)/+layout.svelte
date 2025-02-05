@@ -6,7 +6,9 @@
 
 <div class="sub full" style:--max-width="1200px" style:--side-bar-width="20%">
 	<section class="invert-main col">
-		{@render children()}
+		<div class="read">
+			{@render children()}
+		</div>
 	</section>
 
 	<aside class="invert-sidebar col">
@@ -14,5 +16,3 @@
 		<Tags tags={data.tags} />
 	</aside>
 </div>
-
-

@@ -5,7 +5,7 @@ function create_theme_state() {
 
 	function load_state() {
 		theme = localStorage.getItem('theme') as Theme;
-		document.body.classList = theme;
+		document.body.classList = ['syntax', 'level-up'].includes(theme) ? theme : 'syntax';
 	}
 
 	return {

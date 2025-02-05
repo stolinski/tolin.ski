@@ -26,7 +26,7 @@
 		view-transition-name: var(--transition-name);
 		color: var(--fg);
 		text-decoration: none;
-		padding: 4px;
+		padding: 1px 4px;
 		border-radius: 4px;
 		font-size: var(--fs-xxs);
 		background: rgb(255 255 255 / 0.1);
