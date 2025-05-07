@@ -16,8 +16,8 @@ The compendium for Real World Local First @ Svelte Summit May 8th 2025
 ## Demos
 
 [Habit Path](https://habitpath.io)
-[ZBugs](https://)
-[AI Chat Code](https://)
+[ZBugs](https://bugs.rocicorp.dev/)
+[AI Chat Code](https://github.com/stolinski/zero-ai-svelte)
 
 
 ## Posts and Explanations
