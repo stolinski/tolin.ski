@@ -1,5 +1,5 @@
 ---
-title: Types of Local First Apps
+title: Types of Local First Data
 date: '2024-06-26'
 tags:
   - javascript

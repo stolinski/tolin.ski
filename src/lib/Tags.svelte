@@ -10,7 +10,5 @@
 
 <section class="tags">
 	<h3 class="mini-title">Tags</h3>
-	<ul class="no-list">
-		<PostTags {tags} />
-	</ul>
+	<PostTags {tags} />
 </section>
