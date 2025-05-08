@@ -3,7 +3,7 @@
 	import './app.css';
 	import Header from './Header.svelte';
 	import Footer from './Footer.svelte';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import { onNavigate } from '$app/navigation';
 	import { theme } from '$lib/theme.svelte';
 	import { fade } from 'svelte/transition';
@@ -30,19 +30,19 @@
 	🚧 Please excuse my dust. This site is under construction 🚧
 </div> -->
 
-{#if $page.url.pathname == '/'}
+{#if page.url.pathname == '/'}
 	<HomeHeader />
 {:else}
 	<Header />
 {/if}
 
-<main class:topbar={$page.url.pathname !== '/'} id="main">
+<main class:topbar={page.url.pathname !== '/'} id="main">
 	<div class="layout">
 		{@render children()}
 	</div>
 </main>
 
-{#if !$page.url.pathname.includes('/demos/')}
+{#if !page.url.pathname.includes('/demos/')}
 	<Footer />
 {/if}
 
