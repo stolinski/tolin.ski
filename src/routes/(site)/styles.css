@@ -1,0 +1,125 @@
+html {
+	color-scheme: light dark;
+	font-family: 'Inter', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+	text-transform: uppercase;
+	font-weight: 900;
+	a {
+		text-decoration: none;
+		color: var(--fg);
+	}
+}
+a {
+	color: var(--fg);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+.fluid,
+textarea,
+input,
+select,
+button,
+th,
+td {
+	--fl: 0;
+	--font-size-min: 14;
+	--font-size-max: 20;
+	--font-ratio-min: 1.25;
+	--font-ratio-max: 1.3333333333333333;
+	--font-width-min: 320;
+	--font-width-max: 1500;
+	--fluid-min: calc(var(--font-size-min) * pow(var(--font-ratio-min), var(--fl, 0)));
+	--fluid-max: calc(var(--font-size-max) * pow(var(--font-ratio-max), var(--fl, 0)));
+	--fluid-preferred: calc(
+		(var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min))
+	);
+	--fluid-type: clamp(
+		(var(--fluid-min) / 16) * 1rem,
+		((var(--fluid-min) / 16) * 1rem) -
+			(((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) +
+			(var(--fluid-preferred) * var(--variable-unit, 100vi)),
+		(var(--fluid-max) / 16) * 1rem
+	);
+	font-size: var(--fluid-type);
+}
+
+/* This makes containers, with container queries use a cqi unit instead of vi */
+.fluid-text-container {
+	container-type: inline-size;
+	--variable-unit: 100cqi;
+}
+h1,
+.h1 {
+	--fl: 5;
+}
+h2,
+.h2 {
+	--fl: 4;
+}
+h3,
+.h3 {
+	--fl: 3;
+}
+h4,
+.h4 {
+	--fl: 2;
+}
+h5,
+.h5 {
+	--fl: 1;
+}
+h6,
+.h6 {
+	--fl: 0;
+}
+p,
+li,
+body {
+	--fl: 0;
+}
+.fs-xs {
+	--fl: -1;
+}
+.fs-base {
+	--fl: 0;
+}
+.fs-s {
+	--fl: 1;
+}
+.fs-m {
+	--fl: 2;
+}
+.fs-l {
+	--fl: 3;
+}
+.fs-xl {
+	--fl: 4;
+}
+.fs-xxl {
+	--fl: 5;
+}
+.fs-xxxl {
+	--fl: 6;
+}
+
+.stack {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	* > {
+		margin: 0;
+	}
+}

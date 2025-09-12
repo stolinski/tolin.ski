@@ -8,7 +8,7 @@
 	} = $props();
 </script>
 
-<section class="tags">
-	<h3 class="mini-title">Tags</h3>
+<section>
+	<h3>Tags</h3>
 	<PostTags {tags} />
 </section>

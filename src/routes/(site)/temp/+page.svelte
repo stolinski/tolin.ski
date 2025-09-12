@@ -2,6 +2,6 @@
 	import Iframe from '$/lib/Iframe.svelte';
 </script>
 
-<div class="temp">
+<div>
 	<Iframe path="drawer-css" />
 </div>

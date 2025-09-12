@@ -16,7 +16,6 @@
 	loading="lazy"
 	title="The Origins of Level Up Tutorials"
 	width="100%"
-	class="youtube"
 	src={`https://www.youtube.com/embed/Q9eh2iJsjxE`}
 	frameborder="0"
 	allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"

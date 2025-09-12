@@ -12,9 +12,9 @@
 	} = $props();
 </script>
 
-<h3 class="mini-title">Categories</h3>
-<section class="categories">
-	<ul class="no-list">
+<h3>Categories</h3>
+<section>
+	<ul>
 		{#each categories as category}
 			<li>
 				<a href="/{category.slug}">{category?.metadata?.icon} {category.name}</a>
@@ -24,17 +24,13 @@
 </section>
 
 <style>
-	.categories {
-		margin-bottom: 2rem;
-	}
-
-	li {
-		margin-bottom: 0.5rem;
-		font-size: var(--fs-xxs);
-	}
-
-	a {
-		color: var(--fg);
-		text-decoration: none;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		a {
+			text-decoration: none;
+			color: var(--fg);
+		}
 	}
 </style>

@@ -3,8 +3,8 @@
 	const { data } = $props();
 </script>
 
-<p class="mini-title category">Tag</p>
-<h1 class="title">{data.tag}</h1>
+<p>Tag</p>
+<h1>{data.tag}</h1>
 {#if data.posts.length > 0}
 	{#each data.posts as post}
 		<PostListing {post} />
