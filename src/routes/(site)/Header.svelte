@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ThemePicker from '$/lib/ThemePicker.svelte';
+	// import ThemePicker from '$/lib/ThemePicker.svelte';
 	import { settings } from '$settings';
 </script>
 
