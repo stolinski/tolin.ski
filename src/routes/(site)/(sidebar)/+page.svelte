@@ -17,12 +17,18 @@
 >
 </iframe>
 
-<section class="stack">
-{#if data.posts?.length > 0}
-	{#each data?.posts as post}
-		<PostListing {post} />
-	{/each}
-{:else}
-	<p>No posts in this category yet.</p>
-{/if}
+<section class="stack" style="--layout-gap: 4rem;">
+    {#if data.posts?.length > 0}
+    	{#each data?.posts as post}
+    		<PostListing {post} />
+    	{/each}
+    {:else}
+    	<p>No posts in this category yet.</p>
+    {/if}
 </section>
+
+<style>
+    section {
+        margin-top: 4rem;
+    }
+</style>

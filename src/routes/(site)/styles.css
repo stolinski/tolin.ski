@@ -11,10 +11,20 @@ html {
 	font-style: normal;
 }
 
+:root {
+    --fg: light-dark(#111, #ddd);
+}
+
+p {
+    color: var(--fg);
+}
+
 :where(h1, h2, h3, h4, h5, h6) {
+
 	text-transform: uppercase;
 	font-weight: 900;
 	font-family: 'wake', sans-serif;
+		color: var(--fg);
 	a {
 		text-decoration: none;
 		color: var(--fg);
@@ -121,19 +131,11 @@ body {
 	--fl: 6;
 }
 
-.stack {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	* > {
-		margin: 0;
-	}
-}
-
 .layout-sidebar > * {
 	padding: 0 2rem;
 }
 
 .youtube {
     aspect-ratio: 16 / 9;
+    box-shadow: var(--shadow-5);
 }
