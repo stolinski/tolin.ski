@@ -12,7 +12,7 @@
 	} = $props();
 </script>
 
-<h3>Categories</h3>
+<h3 class="h6">Categories</h3>
 <section>
 	<ul>
 		{#each categories as category}

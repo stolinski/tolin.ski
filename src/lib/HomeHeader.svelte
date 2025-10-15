@@ -1,20 +1,37 @@
 <script lang="ts">
-	import ThemePicker from '$/lib/ThemePicker.svelte';
 	import { settings } from '$settings';
 </script>
 
 <header>
-	<div>
-		<div>
+	<div class="links">
+		<div class="flex">
 			<a href="https://syntax.fm">The Syntax Podcast</a>
 			<a href="https://github.com/stolinski">GitHub</a>
 		</div>
-		<ThemePicker />
 	</div>
-	<section>
+	<section class="hero">
 		<h1 style:--transition-name="scott-tolinski">{settings.app_name}</h1>
-		<p>
-			Hey, what's up? I'm Scott, the Co-host of Syntax.fm and creator of Level Up Tutorials
-		</p>
 	</section>
 </header>
+
+<style>
+    .links {
+        background: var(--tint-or-shade);
+        padding: var(--vs-s) var(--vs-m);
+        a {
+            text-decoration: none;
+            &:hover {
+                color: var(--yellow-5);
+            }
+        }
+    }
+
+    .hero {
+        text-align: center;
+        h1 {
+            --fl: 6;
+            padding: var(--vs-xl);
+        }
+    }
+
+</style>

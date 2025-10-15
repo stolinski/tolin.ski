@@ -4,14 +4,14 @@
 	const { data, children } = $props();
 </script>
 
-<div style:--max-width="1200px" style:--side-bar-width="20%">
+<div class="layout-sidebar wide invert">
 	<section>
 		<div>
 			{@render children()}
 		</div>
 	</section>
 
-	<aside>
+	<aside class="stack">
 		<Categories categories={data.categories} />
 		<Tags tags={data.tags} />
 	</aside>

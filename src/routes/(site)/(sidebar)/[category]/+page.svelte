@@ -7,7 +7,7 @@
 <p>Category</p>
 <h1>{data.category}</h1>
 <div>
-	{data.content}
+	<svelte:component this={data.content} />
 </div>
 {#if data.posts.length > 0}
 	{#each data.posts as post}
