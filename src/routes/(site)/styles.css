@@ -1,7 +1,6 @@
 @font-face {
-  font-family: "wake";
-  src:
-    url("/newake.otf") format("opentype");
+	font-family: 'wake';
+	src: url('/newake.otf') format('opentype');
 }
 
 html {
@@ -12,19 +11,18 @@ html {
 }
 
 :root {
-    --fg: light-dark(#111, #ddd);
+	--fg: light-dark(#111, #ddd);
 }
 
 p {
-    color: var(--fg);
+	color: var(--fg);
 }
 
 :where(h1, h2, h3, h4, h5, h6) {
-
 	text-transform: uppercase;
 	font-weight: 900;
 	font-family: 'wake', sans-serif;
-		color: var(--fg);
+	color: var(--fg);
 	a {
 		text-decoration: none;
 		color: var(--fg);
@@ -136,6 +134,133 @@ body {
 }
 
 .youtube {
-    aspect-ratio: 16 / 9;
-    box-shadow: var(--shadow-5);
+	aspect-ratio: 16 / 9;
+	box-shadow: var(--shadow-5);
+}
+
+/* Post / markdown content */
+.post-content {
+	/* Markdown flow: reset element margins, then rebuild rhythm intentionally */
+}
+
+.post-content > :where(*) {
+	margin: 0;
+}
+
+.post-content > :where(* + *) {
+	margin-block-start: var(--pad-m);
+}
+
+/* Headings: more space before, a little less after */
+.post-content > :where(h1, h2, h3, h4, h5, h6) {
+	line-height: 1.05;
+	text-wrap: balance;
+}
+
+/* Big section breaks */
+.post-content > :where(h2) {
+	margin-block-start: var(--vs-xl);
+}
+
+.post-content > :where(h3) {
+	margin-block-start: var(--vs-l);
+}
+
+.post-content > :where(h4, h5, h6) {
+	margin-block-start: var(--vs-m);
+}
+
+.post-content > :where(h2, h3, h4, h5, h6):first-child {
+	margin-block-start: 0;
+}
+
+.post-content > :where(h2, h3) + :where(*) {
+	margin-block-start: var(--pad-m);
+}
+
+.post-content > :where(h4, h5, h6) + :where(*) {
+	margin-block-start: var(--pad-s);
+}
+
+/* Tone down heading size inside posts a touch */
+.post-content :where(h2) {
+	--fl: 3;
+}
+
+.post-content :where(h3) {
+	--fl: 2;
+}
+
+.post-content :where(p, li) {
+	line-height: 1.65;
+	text-wrap: pretty;
+}
+
+.post-content :where(a) {
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.18em;
+}
+
+.post-content :where(ul, ol) {
+	padding-inline-start: 1.25em;
+}
+
+.post-content :where(li + li) {
+	margin-block-start: 0.35em;
+}
+
+.post-content :where(pre:not(.shiki)) {
+	padding: var(--pad-m);
+	border-radius: var(--br-l);
+	overflow-x: auto;
+	background: var(--tint-or-shade);
+	border: 1px solid color-mix(in oklab, var(--fg), transparent 86%);
+	font-size: 0.875em;
+	line-height: 1.5;
+}
+
+.post-content :where(pre:not(.shiki) code) {
+	padding: 0;
+	background: transparent;
+}
+
+.post-content :where(pre.shiki) {
+	margin: 0;
+	overflow-x: auto;
+	padding: var(--pad-m);
+	border-radius: var(--br-l);
+	border: 1px solid color-mix(in oklab, var(--fg), transparent 86%);
+	font-size: 0.875em;
+	line-height: 1.5;
+	max-width: 100%;
+}
+
+.post-content :where(pre.shiki code) {
+	padding: 0;
+	background: transparent;
+}
+
+.post-content :where(:not(pre) > code) {
+	padding: 0.15em 0.4em;
+	border-radius: var(--br-s);
+	background: var(--tint-or-shade);
+	border: 1px solid color-mix(in oklab, var(--fg), transparent 88%);
+}
+
+.post-content :where(blockquote) {
+	padding-inline-start: var(--pad-m);
+	border-inline-start: 4px solid color-mix(in oklab, var(--yellow-5), transparent 30%);
+	opacity: 0.95;
+}
+
+.post-content :where(img, video) {
+	max-width: 100%;
+	height: auto;
+	border-radius: var(--br-l);
+}
+
+.post-content :where(hr) {
+	width: 100%;
+	border: none;
+	border-top: 1px solid color-mix(in oklab, var(--fg), transparent 82%);
 }

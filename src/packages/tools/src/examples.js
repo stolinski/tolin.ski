@@ -1,6 +1,7 @@
 import { visit } from 'unist-util-visit';
 
 export default function remarkDoubleDoller() {
+	// @ts-ignore - unist tree types
 	return (tree, file) => {
 		const imports = new Set();
 		let hasComponent = false;
@@ -27,7 +28,8 @@ export default function remarkDoubleDoller() {
 		// If no script tag was found and we have imports, add a new script tag
 		if (
 			hasComponent &&
-			!tree.children.some((node) => node.type === 'html' && node.value.trim().startsWith('<script'))
+			// @ts-ignore - unist tree types
+			!tree.children.some((node) => node.type === 'html' && node.value?.trim().startsWith('<script'))
 		) {
 			const importString = Array.from(imports).join('\n');
 			tree.children.unshift({
@@ -44,8 +46,8 @@ export default function remarkDoubleDoller() {
 			const newNodes = [];
 			let lastIndex = 0;
 
-			matches.forEach((match) => {
-				const [fullMatch, componentName] = match.match(/\$\$\s*(\S+)/);
+			matches.forEach((/** @type {string} */ match) => {
+				const [fullMatch, componentName] = /** @type {RegExpMatchArray} */ (match.match(/\$\$\s*(\S+)/));
 				const startIndex = node.value.indexOf(fullMatch, lastIndex);
 
 				if (startIndex > lastIndex) {

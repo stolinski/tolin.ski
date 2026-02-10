@@ -21,19 +21,19 @@ export function get_all_posts() {
 	return posts;
 }
 
-export function get_all_tags_from_posts(posts: Post[]) {
-	const category_counts = new Map();
+export function get_all_tags_from_posts(posts: Post[]): [string, number][] {
+	const category_counts = new Map<string, number>();
 
 	posts.forEach((post) => {
 		post.tags.forEach((tag) => {
 			if (category_counts.has(tag)) {
-				category_counts.set(tag, category_counts.get(tag) + 1);
+				category_counts.set(tag, category_counts.get(tag)! + 1);
 			} else {
 				category_counts.set(tag, 1);
 			}
 		});
 	});
-	return category_counts;
+	return Array.from(category_counts.entries());
 }
 
 export function get_all_posts_in_category(category: string) {

@@ -2,8 +2,9 @@
 	import { theme } from '$lib/theme.svelte';
 	import { browser } from '$app/environment';
 
-	function oninput(e) {
-		theme.theme = e.target.value || 'level-up';
+	function oninput(e: Event) {
+		const value = (e.target as HTMLSelectElement).value;
+		theme.theme = (value === 'syntax' || value === 'level-up') ? value : 'level-up';
 	}
 </script>
 

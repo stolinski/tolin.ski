@@ -22,10 +22,11 @@
 		</section>
 	</div>
 	<div class="indicators">
-		<a style="--i: 1" href="#section1"></a><a style="--i: 2" href="#section2"></a><a
+		<a style="--i: 1" href="#section1" aria-label="Go to section 1"></a><a style="--i: 2" href="#section2" aria-label="Go to section 2"></a><a
 			style="--i: 3"
 			href="#section3"
-		></a><a style="--i: 4" href="#section4"></a>
+			aria-label="Go to section 3"
+		></a><a style="--i: 4" href="#section4" aria-label="Go to section 4"></a>
 	</div>
 </div>
 

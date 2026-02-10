@@ -4,7 +4,7 @@
 </script>
 
 <div class="container">
-	<button type="button" class:play class="box" onclick={() => (play = !play)}></button>
+	<button type="button" class:play class="box" onclick={() => (play = !play)} aria-label="Toggle CPU animation"></button>
 	<button type="button" class:play={play_gpu} class="box gpu" onclick={() => (play_gpu = !play_gpu)}
 		>GPU</button
 	>

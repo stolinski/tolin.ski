@@ -2,14 +2,18 @@ import { unified } from 'unified';
 import remarkParse from 'remark-parse';
 import remarkHtml from 'remark-html';
 
+/**
+ * @param {Array<{type: string, value?: string}>} data
+ * @returns {Array<{type: string, value?: string}>}
+ */
 function remove_html_elements(data) {
 	let script_index = -1;
 	let excerpt_index = -1;
 	let yaml_index = -1;
 
 	// Find the indices of the <script />, <!-- excerpt -->, and type: 'yaml'
-	data.forEach((item, index) => {
-		if (item.type === 'html' && item.value.startsWith('<script>')) {
+	data.forEach((/** @type {{type: string, value?: string}} */ item, /** @type {number} */ index) => {
+		if (item.type === 'html' && item.value?.startsWith('<script>')) {
 			script_index = index;
 		}
 		if (item.type === 'html' && item.value === '<!-- excerpt -->') {
@@ -25,7 +29,7 @@ function remove_html_elements(data) {
 	let end_index = excerpt_index !== -1 ? excerpt_index : data.length;
 	if (start_index !== -1 && end_index !== -1 && start_index < end_index) {
 		// Filter out HTML elements between start and end index
-		return data.filter((item, index) => {
+		return data.filter((/** @type {{type: string, value?: string}} */ item, /** @type {number} */ index) => {
 			if (index <= start_index || index >= end_index) {
 				return true;
 			}
@@ -65,6 +69,7 @@ const extract = (markdown) => {
 };
 
 export function dropInExcerpt() {
+	// @ts-ignore - mdsvex plugin types
 	return async function transform(tree, file) {
 		let new_tree = tree.children;
 		if (file.contents.includes('<!-- excerpt -->')) {

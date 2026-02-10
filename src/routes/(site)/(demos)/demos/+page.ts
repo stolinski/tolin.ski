@@ -1,3 +1,10 @@
+interface DemoItem {
+	name: string;
+	path: string | undefined;
+}
+
+type DemoMap = Record<string, DemoItem[]>;
+
 export const load = async function () {
 	const demos = get_all_demos();
 	return {
@@ -5,20 +12,17 @@ export const load = async function () {
 	};
 };
 
-function get_all_demos() {
-	let demos = {};
-
+function get_all_demos(): DemoMap {
 	const paths = import.meta.glob(`$/demo/**/*`, {
 		eager: true,
 	});
-	demos = transformPaths(paths);
-	return demos;
+	return transformPaths(paths);
 }
 
-function transformPaths(paths: Record<string, any>) {
-	const result = {};
+function transformPaths(paths: Record<string, unknown>): DemoMap {
+	const result: DemoMap = {};
 
-	for (const [path, module] of Object.entries(paths)) {
+	for (const [path] of Object.entries(paths)) {
 		const fileName = path.split('/').pop()?.split('.')[0];
 		const [componentName, type] = fileName?.split('-') ?? [];
 

@@ -14,14 +14,17 @@ import { createHighlighter } from 'shiki';
 
 let langs = ['javascript', 'typescript', 'css', 'html', 'svelte', 'jsx'];
 
+/**
+ * @param {{theme: string}} options
+ */
 function mdsvexOptions(options) {
 	const { theme } = options;
 	return {
 		extensions: ['.md', '.svx'],
-		remarkPlugins: [dropInExcerpt, examples, [(remarkToc, { tight: true })]],
+		remarkPlugins: [dropInExcerpt, examples, [remarkToc, { tight: true }]],
 		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 		highlight: {
-			highlighter: async (code, lang = 'text') => {
+			highlighter: async (/** @type {string} */ code, /** @type {string} */ lang = 'text') => {
 				const highlighter = await createHighlighter({
 					themes: [theme],
 					langs,
@@ -36,11 +39,10 @@ function mdsvexOptions(options) {
 }
 
 /**
- *
- * @param {Options} [options]
+ * @param {{theme: string}} options
  * @returns
  */
 export function md_pages(options) {
-	const mdsvex_options = mdsvexOptions(options);
-	return mdsvex(mdsvex_options);
+	// @ts-ignore - mdsvex plugin types
+	return mdsvex(mdsvexOptions(options));
 }
