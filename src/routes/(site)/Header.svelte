@@ -12,6 +12,7 @@
 <style>
     header {
         padding: var(--vs-s) var(--vs-m);
+        text-align: center;
         p {
             margin: 0;
             font-family: 'wake';

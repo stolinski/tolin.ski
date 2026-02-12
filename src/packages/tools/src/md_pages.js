@@ -4,7 +4,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkToc from 'remark-toc';
 import examples from './examples.js';
-import { createHighlighter } from 'shiki';
+import { getHighlighter } from './highlighter.js';
 
 /**
  * @typedef Options
@@ -25,10 +25,7 @@ function mdsvexOptions(options) {
 		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 		highlight: {
 			highlighter: async (/** @type {string} */ code, /** @type {string} */ lang = 'text') => {
-				const highlighter = await createHighlighter({
-					themes: [theme],
-					langs,
-				});
+				const highlighter = await getHighlighter({ themes: [theme], langs });
 
 				await highlighter.loadLanguage('javascript', 'typescript', 'css', 'html', 'svelte', 'jsx');
 				const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'syntax' }));

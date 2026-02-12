@@ -1,9 +1,14 @@
 import { createHighlighter } from 'shiki';
 import syntax_theme from '$/syntax.js';
 
+let highlighterPromise: ReturnType<typeof createHighlighter> | null = null;
+
 export async function getHighlighter() {
-	return createHighlighter({
-		themes: [syntax_theme],
-		langs: ['html'],
-	});
+	if (!highlighterPromise) {
+		highlighterPromise = createHighlighter({
+			themes: [syntax_theme],
+			langs: ['html'],
+		});
+	}
+	return highlighterPromise;
 }

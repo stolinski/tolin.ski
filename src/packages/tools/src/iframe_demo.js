@@ -1,4 +1,4 @@
-import { createHighlighter } from 'shiki';
+import { getHighlighter } from './highlighter.js';
 /**
  *
  * @param {string} code
@@ -6,13 +6,11 @@ import { createHighlighter } from 'shiki';
  * @returns
  */
 async function transform(code, theme) {
-	const highlighter = await createHighlighter({
-		themes: [typeof theme === 'string' ? theme : 'night-owl'],
-		langs: ['html'],
-	});
+	const themeName = typeof theme === 'string' ? theme : 'night-owl';
+	const highlighter = await getHighlighter({ themes: [themeName] });
 	return highlighter.codeToHtml(code, {
 		lang: 'html',
-		theme: typeof theme === 'string' ? theme : 'night-owl',
+		theme: themeName,
 	});
 }
 

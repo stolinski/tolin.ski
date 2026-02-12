@@ -22,6 +22,6 @@
 	}
 
 	.post-content {
-		/* spacing handled globally in src/routes/(site)/styles.css */
+		margin-top: var(--vs-xl);
 	}
 </style>

@@ -172,7 +172,6 @@ body {
 
 /* Post / markdown content */
 .post-content {
-	/* Markdown flow: reset element margins, then rebuild rhythm intentionally */
 }
 
 .post-content > :where(*) {
