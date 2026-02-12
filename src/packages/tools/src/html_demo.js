@@ -1,4 +1,4 @@
-import { getHighlighter } from 'shiki';
+import { createHighlighter } from 'shiki';
 
 /**
  *
@@ -27,22 +27,14 @@ function parseContent(input) {
  * @returns
  */
 async function transform(code, theme) {
-	if (typeof theme === 'string') {
-		const highlighter = await getHighlighter({
-			themes: [theme],
-			langs: ['html'],
-		});
-		await highlighter.loadLanguage('html');
-		return highlighter.codeToHtml(code, { lang: 'html', theme });
-	} else {
-		const highlighter = await getHighlighter({
-			themes: [],
-			langs: ['html'],
-		});
-		highlighter.loadTheme(theme);
-		await highlighter.loadLanguage('html');
-		return highlighter.codeToHtml(code, { lang: 'html', theme: 'syntax' });
-	}
+	const highlighter = await createHighlighter({
+		themes: [typeof theme === 'string' ? theme : 'night-owl'],
+		langs: ['html'],
+	});
+	return highlighter.codeToHtml(code, {
+		lang: 'html',
+		theme: typeof theme === 'string' ? theme : 'night-owl',
+	});
 }
 
 const default_theme = 'night-owl';

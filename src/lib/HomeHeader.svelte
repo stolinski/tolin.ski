@@ -10,7 +10,7 @@
 		</div>
 	</div>
 	<section class="hero">
-		<h1 style:--transition-name="scott-tolinski">{settings.app_name}</h1>
+		<h1>{settings.app_name}</h1>
 	</section>
 </header>
 

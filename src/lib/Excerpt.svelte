@@ -3,7 +3,7 @@
 		$props();
 </script>
 
-<div class="excerpt stack" data-view={view} style:--transition-name="post-excerpt-{slug}">
+<div class="excerpt stack" data-view={view}>
 	{@html excerpt}
 </div>
 

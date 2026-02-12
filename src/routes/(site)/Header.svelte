@@ -5,7 +5,7 @@
 
 <header>
 	<div>
-		<p style:--transition-name="scott-tolinski"><a href="/">{settings.app_name}</a></p>
+		<p><a href="/">{settings.app_name}</a></p>
 	</div>
 </header>
 

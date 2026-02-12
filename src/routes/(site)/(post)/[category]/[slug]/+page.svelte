@@ -7,7 +7,7 @@
 
 <section class="layout-readable center" style="--layout-max-width: 72ch">
 	<div class="stack post-page">
-		<h1 style:--transition-name="post-title-{data.meta.slug}">{data.meta.title}</h1>
+		<h1>{data.meta.title}</h1>
 		<Excerpt slug={data.meta.slug} excerpt={data.meta.excerpt} view="PAGE" />
 		<PostTags slug={data.meta.slug} tags={data.meta.tags} />
 		<div class="post-content">

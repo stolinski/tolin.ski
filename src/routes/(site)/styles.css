@@ -3,6 +3,38 @@
 	src: url('/newake.otf') format('opentype');
 }
 
+::view-transition-group(root) {
+	animation: none;
+	background: var(--bg);
+}
+
+::view-transition-image-pair(root) {
+	animation: none;
+}
+
+::view-transition-old(root) {
+	animation: fall-away 0.6s cubic-bezier(0.55, 0, 1, 0.45) forwards;
+	z-index: 1;
+}
+
+::view-transition-new(root) {
+	animation: none;
+	z-index: 0;
+}
+
+@keyframes fall-away {
+	0% {
+		opacity: 1;
+		box-shadow: 0 0 20px rgb(0 0 0 / 0.5);
+		translate: 0 0;
+	}
+	100% {
+		opacity: 1;
+		box-shadow: 0 0 20px rgb(0 0 0 / 0.5);
+		translate: 0 120vh;
+	}
+}
+
 html {
 	color-scheme: light dark;
 	font-optical-sizing: auto;

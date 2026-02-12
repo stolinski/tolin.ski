@@ -6,7 +6,7 @@
 </script>
 
 <article class="stack post-listing">
-	<h2 style:--transition-name="post-title-{post.slug}">
+	<h2>
 		<a href="/{post.category}/{post.slug}">{post.title}</a>
 	</h2>
 	<p class="post-meta fs-xs">
