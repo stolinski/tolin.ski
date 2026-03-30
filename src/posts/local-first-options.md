@@ -21,7 +21,7 @@ Local first, which is more than just offline data with syncing, is a way of writ
 
 There is a massive amount of new services and libraries that promise to be the best solution for local first, but in my experience which one you should choose depends largely on your needs and your project. I know "it depends" sucks as an answer, but I'm going to try to make this easy. 
 
-So. Below, I'm going to list some really interesting projects that will help you on your data syncing journey listed from Most Full Featured / Lease Flexible -> Least Full Featured / Most Flexible, with considerations as to if you are starting a project fresh or not.
+So. Below, I'm going to list some really interesting projects that will help you on your data syncing journey listed from Most Full Featured / Least Flexible -> Least Full Featured / Most Flexible, with considerations as to if you are starting a project fresh or not.
 
 ## The "Do It All For Me" Options
 
@@ -67,7 +67,7 @@ Compared to Triplit, I found this to be slightly more verbose. Where Triplit sub
 
 ## Give Me More Control
 
-Many of these options provide you the syncing layer and the local db layer but don't give you a backend. This makes them more interesting for people who want to integrate into their existing stack. Doing more is certainly not an awful thing when the result is more control, you have more work todo yourself.
+Many of these options provide you the syncing layer and the local db layer but don't give you a backend. This makes them more interesting for people who want to integrate into their existing stack. Doing more is certainly not an awful thing when the result is more control, you have more work to do yourself.
  
 ### RxDB
 
@@ -75,17 +75,17 @@ RxDB is a really great mature option here where as they say, "Offline is optiona
 
 #### Pricing
 
-While the core is open source, many of the best features are behind a pay wall that can get somewhat costly for small time hackers just looking to get going.
+While the core is open source, many of the best features are behind a paywall that can get somewhat costly for small time hackers just looking to get going.
 
-The price also can be looked at as a positive because this is a product, you can have more confidence that it just won't go away anytime soon, that said if you aren't looking to potentially cough up $200/m you might want to look elsewhere. Don't let this post disuade you from looking at it though because it's an incredible option, look at their pricing page and decide if the price is too high https://rxdb.info/premium
+The price also can be looked at as a positive because this is a product, you can have more confidence that it just won't go away anytime soon, that said if you aren't looking to potentially cough up $200/m you might want to look elsewhere. Don't let this post dissuade you from looking at it though because it's an incredible option, look at their pricing page and decide if the price is too high https://rxdb.info/premium
 
-### Elecctric SQL
+### Electric SQL
 
 https://electric-sql.com
 
 Once again this gives you the most complex aspect, the sync layer while letting you have more control. It's meant to work diectly with a Postgres db and allows you to connevt via common backends like Prisma, Rails, Laravel and more. It also works well with most front-ends but once again a huge emphasis on React instead of the web platform itself. That's fine because there is nothing stopping you from using it without React, just know the happy path for most of the docs is in React.
 
-Another really appealing thing with ElectricSQL is that is uses an in browser SQLite instead of Indexedb
+Another really appealing thing with ElectricSQL is that it uses an in browser SQLite instead of Indexedb
 
 #### ElectricSQL Pricing
 
@@ -113,11 +113,11 @@ There is also an interesting query language to store and retive things using lan
 
 #### The Best Parts
 
-TineBase seems totally rock solid with 100% test coverage, and a long history of active development. This is mature software that will work well for you. It also has a tiny footprint which is great for local software.
+TinyBase seems totally rock solid with 100% test coverage, and a long history of active development. This is mature software that will work well for you. It also has a tiny footprint which is great for local software.
 
 ## I Want To Do It All
 
-For those of you that want the most control, there are many options that take care of the toughest parts in the sync layer. I'll talk less about these since most of them are just sync layers, but there are al ot of great options here and these are some of them.
+For those of you that want the most control, there are many options that take care of the toughest parts in the sync layer. I'll talk less about these since most of them are just sync layers, but there are a lot of great options here and these are some of them.
 
 ### Replicache
 
@@ -127,7 +127,7 @@ Replicache is a super enticing option. It's a client-side sync framework and it 
 
 #### The Bummer
 
-Cost here is the big bummer. The good news is that it's free for non-commercial projects but expensive for commecrial products ($500/m with less than 1k profiles and less than $200k ARR>). There is also no self hosted version that I could find. This is a serious option for serious business or people wanting to learn.
+Cost here is the big bummer. The good news is that it's free for non-commercial projects but expensive for commercial products ($500/m with less than 1k profiles and less than $200k ARR>). There is also no self hosted version that I could find. This is a serious option for serious business or people wanting to learn.
 
 
 
