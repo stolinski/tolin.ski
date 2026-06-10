@@ -15,19 +15,24 @@ import { getHighlighter } from './highlighter.js';
 let langs = ['javascript', 'typescript', 'css', 'html', 'svelte', 'jsx'];
 
 /**
- * @param {{theme: string}} options
+ * @param {{theme: import('shiki').ThemeInput}} options
  */
 function mdsvexOptions(options) {
 	const { theme } = options;
+	/** @type {boolean} */
+	let themeLoaded = false;
 	return {
 		extensions: ['.md', '.svx'],
 		remarkPlugins: [dropInExcerpt, examples, [remarkToc, { tight: true }]],
 		rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
 		highlight: {
 			highlighter: async (/** @type {string} */ code, /** @type {string} */ lang = 'text') => {
-				const highlighter = await getHighlighter({ themes: [theme], langs });
+				const highlighter = await getHighlighter({ langs });
 
-				await highlighter.loadLanguage('javascript', 'typescript', 'css', 'html', 'svelte', 'jsx');
+				if (!themeLoaded) {
+					await highlighter.loadTheme(theme);
+					themeLoaded = true;
+				}
 				const html = escapeSvelte(highlighter.codeToHtml(code, { lang, theme: 'syntax' }));
 				return `{@html \`${html}\` }`;
 			},
@@ -36,7 +41,7 @@ function mdsvexOptions(options) {
 }
 
 /**
- * @param {{theme: string}} options
+ * @param {{theme: import('shiki').ThemeInput}} options
  * @returns
  */
 export function md_pages(options) {
