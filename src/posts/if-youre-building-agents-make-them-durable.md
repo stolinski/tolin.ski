@@ -29,6 +29,8 @@ by moving to Pi Durable:
 Point to the example that backs up each claim. Don't change any code.
 ```
 
+<iframe class="youtube" width="100%" src="https://www.youtube.com/embed/BLRReTwV8Fc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 Last night, my code fixed itself.
 
 An error landed in Sentry. An agent picked it up, worked out the root cause, wrote a fix, ran the tests, and opened a pull request. Nobody typed anything to start it.
