@@ -8,8 +8,14 @@
 	import { theme } from '$lib/theme.svelte';
 	import { fade } from 'svelte/transition';
 	import HomeHeader from '$lib/HomeHeader.svelte';
+	import { settings } from '$settings';
 
 	let { children } = $props();
+
+	const title = $derived(page.data.title ?? settings.app_name);
+	const og_image = $derived(
+		`${page.url.origin}/og${page.url.pathname === '/' ? '/index' : page.url.pathname}.png`,
+	);
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
@@ -27,6 +33,13 @@
 </script>
 
 <svelte:head>
+	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta property="og:url" content={page.url.href} />
+	<meta property="og:image" content={og_image} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 	<link

@@ -8,6 +8,7 @@ type DemoMap = Record<string, DemoItem[]>;
 export const load = async function () {
 	const demos = get_all_demos();
 	return {
+		title: 'All Demos',
 		demos,
 	};
 };

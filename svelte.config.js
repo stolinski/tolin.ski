@@ -16,6 +16,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
+			origin: 'https://tolin.ski',
 			handleHttpError: 'warn',
 		},
 		alias: {
