@@ -12,7 +12,7 @@ import { getHighlighter } from './highlighter.js';
  * @property {string} syntax_theme - The Shiki theme.
  */
 
-let langs = ['javascript', 'typescript', 'css', 'html', 'svelte', 'jsx'];
+let langs = ['javascript', 'typescript', 'css', 'html', 'svelte', 'jsx', 'bash'];
 
 /**
  * @param {{theme: import('shiki').ThemeInput}} options
