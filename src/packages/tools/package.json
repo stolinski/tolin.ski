@@ -1,20 +1,20 @@
 {
 	"author": "Scott Tolinski",
 	"dependencies": {
-		"@clack/prompts": "^0.7.0",
-		"@shikijs/markdown-it": "^1.6.0",
-		"jsdom": "^24.1.0",
+		"@clack/prompts": "^0.11.0",
+		"@shikijs/markdown-it": "^1.29.2",
+		"jsdom": "^24.1.3",
 		"kleur": "^4.1.5",
-		"markdown-it": "^14.1.0",
-		"mdsvex": "^0.11.0",
+		"markdown-it": "^14.3.3",
+		"mdsvex": "^0.12.8",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-slug": "^6.0.0",
 		"remark-html": "^16.0.1",
 		"remark-parse": "^11.0.0",
 		"remark-toc": "^9.0.0",
-		"shiki": "^1.6.0",
-		"unified": "^11.0.4",
-		"unist-util-visit": "^5.0.0"
+		"shiki": "^1.29.2",
+		"unified": "^11.0.5",
+		"unist-util-visit": "^5.2.0"
 	},
 	"description": "A SvelteKit Svelte 5 PocketBase Starter Kit with a CLI",
 	"exports": {
